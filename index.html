@@ -1141,6 +1141,800 @@
             font-size: 0.8rem;
             font-weight: 700;
         }
+
+        .preview-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background: #fff;
+            align-items: center;
+        }
+        .preview-card img {
+            width: 120px; height: 80px; object-fit: cover; border-radius: 4px;
+        }
+        .preview-info {
+            flex: 1;
+        }
+        .preview-info h4 {
+            margin: 0 0 .5rem; font-size: 1rem;
+        }
+        .preview-info p {
+            margin: 0 0 .5rem; font-size: .9rem; color: #555;
+        }
+        .preview-meta {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin-top: .5rem;
+        }
+        .preview-meta .pv-badge {
+            font-weight: 700;
+            color: #007AFF;
+        }
+        .preview-meta .tag-badge {
+            padding: .2rem .6rem;
+            border-radius: 12px;
+            font-size: .8rem;
+            background: rgba(0,122,255,0.1);
+            color: #007AFF;
+        }
+
+        /* PR & Digital Operations Dashboard */
+        .operations-overview {
+            background: linear-gradient(135deg, 
+                var(--material-thick) 0%, 
+                rgba(0, 122, 255, 0.05) 100%);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--shadow-2);
+        }
+
+        .operations-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .ops-stat {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-primary);
+            border-radius: 16px;
+            box-shadow: var(--shadow-1);
+            transition: all 0.3s var(--spring-1);
+        }
+
+        .ops-stat:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-3);
+        }
+
+        .ops-stat.core {
+            border-left: 4px solid var(--system-blue);
+        }
+
+        .ops-stat.tech {
+            border-left: 4px solid var(--system-purple);
+        }
+
+        .ops-stat.business {
+            border-left: 4px solid var(--system-green);
+        }
+
+        .ops-stat.upcoming {
+            border-left: 4px solid var(--system-orange);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .stat-content .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--label-primary);
+            line-height: 1;
+        }
+
+        .stat-content .stat-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--label-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Featured Projects Section */
+        .featured-projects-section {
+            margin-bottom: 4rem;
+        }
+
+        .featured-projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-grouped-secondary);
+            border: 0.5px solid var(--system-gray6);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-2);
+            transition: all 0.4s var(--spring-1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card.featured {
+            background: linear-gradient(135deg, 
+                var(--bg-grouped-secondary) 0%, 
+                rgba(0, 122, 255, 0.03) 100%);
+            border-color: rgba(0, 122, 255, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: var(--shadow-4);
+            border-color: var(--system-blue);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .project-status-badge.live {
+            background: linear-gradient(135deg, var(--system-green), #30D158);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .project-progress-ring {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .progress-circle {
+            transition: stroke-dashoffset 1s ease-in-out;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--label-primary);
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-client,
+        .project-type {
+            background: rgba(0, 122, 255, 0.1);
+            color: var(--system-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .project-type {
+            background: rgba(175, 82, 222, 0.1);
+            color: var(--system-purple);
+        }
+
+        .project-title {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--label-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .project-description {
+            color: var(--label-secondary);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-preview-container {
+            background: var(--system-gray6);
+            border-radius: 16px;
+            height: 120px;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s var(--spring-1);
+        }
+
+        .project-preview-container:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-2);
+        }
+
+        .preview-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--label-tertiary);
+        }
+
+        .preview-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .preview-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(0, 122, 255, 0.9), 
+                rgba(175, 82, 222, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-preview-container:hover .preview-overlay {
+            opacity: 1;
+        }
+
+        .preview-button {
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 1rem;
+            background: var(--fill-quaternary);
+            border-radius: 12px;
+        }
+
+        .metric-value {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--system-blue);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--label-tertiary);
+            font-weight: 600;
+        }
+
+        /* Project Preview Modal */
+        .project-preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-preview-modal.show {
+            opacity: 1;
+        }
+
+        .preview-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .preview-modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            max-width: 1200px;
+            height: 80vh;
+            background: var(--bg-primary);
+            border-radius: 24px;
+            box-shadow: var(--shadow-5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: var(--system-gray6);
+            border-bottom: 0.5px solid var(--system-gray5);
+        }
+
+        .preview-modal-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--label-primary);
+        }
+
+        .preview-close-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--system-red);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s var(--spring-1);
+        }
+
+        .preview-close-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-2);
+        }
+
+        .preview-modal-body {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            overflow: hidden;
+        }
+
+        .preview-iframe-container {
+            background: white;
+            position: relative;
+        }
+
+
+
+
+
+        .preview-info-panel {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .preview-project-details h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--label-primary);
+            margin: 1.5rem 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--system-gray5);
+        }
+
+        .preview-project-details h4:first-child {
+            margin-top: 0;
+        }
+
+        .preview-project-details p {
+            color: var(--label-secondary);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .preview-project-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .preview-project-details li {
+            color: var(--label-secondary);
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .preview-project-details li::before {
+            content: "•";
+            color: var(--system-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .effect-metrics {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .effect-item {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-1);
+        }
+
+        .effect-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--system-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .effect-label {
+            font-size: 0.85rem;
+            color: var(--label-tertiary);
+            font-weight: 600;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-item {
+            background: rgba(0, 122, 255, 0.1);
+            color: var(--system-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Kanban Board */
+        .kanban-board {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .kanban-column {
+            background: var(--bg-grouped-secondary);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 0.5px solid var(--system-gray6);
+            min-height: 500px;
+        }
+
+        .column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--system-gray5);
+        }
+
+        .column-header h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--label-primary);
+        }
+
+        .column-header.core h3 {
+            color: var(--system-blue);
+        }
+
+        .column-header.tech h3 {
+            color: var(--system-purple);
+        }
+
+        .column-header.business h3 {
+            color: var(--system-green);
+        }
+
+        .column-header.upcoming h3 {
+            color: var(--system-orange);
+        }
+
+        .task-count {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--label-tertiary);
+            background: var(--fill-quaternary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 8px;
+        }
+
+        .kanban-tasks {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .task-card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid var(--system-gray6);
+            transition: all 0.3s var(--spring-1);
+            cursor: pointer;
+        }
+
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-2);
+        }
+
+        .task-card.in-progress {
+            border-left: 4px solid var(--system-blue);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(0, 122, 255, 0.02) 100%);
+        }
+
+        .task-card.planning {
+            border-left: 4px solid var(--system-purple);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(175, 82, 222, 0.02) 100%);
+        }
+
+        .task-card.urgent {
+            border-left: 4px solid var(--system-red);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(255, 59, 48, 0.02) 100%);
+        }
+
+        .task-card.maintenance {
+            border-left: 4px solid var(--system-green);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(52, 199, 89, 0.02) 100%);
+        }
+
+        .task-card.future {
+            border-left: 4px solid var(--system-orange);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(255, 149, 0, 0.02) 100%);
+        }
+
+        .task-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .task-card.in-progress .task-status {
+            background: rgba(0, 122, 255, 0.15);
+            color: var(--system-blue);
+        }
+
+        .task-card.planning .task-status {
+            background: rgba(175, 82, 222, 0.15);
+            color: var(--system-purple);
+        }
+
+        .task-card.urgent .task-status {
+            background: rgba(255, 59, 48, 0.15);
+            color: var(--system-red);
+        }
+
+        .task-card.maintenance .task-status {
+            background: rgba(52, 199, 89, 0.15);
+            color: var(--system-green);
+        }
+
+        .task-card.future .task-status {
+            background: rgba(255, 149, 0, 0.15);
+            color: var(--system-orange);
+        }
+
+        .task-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--label-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .task-card p {
+            font-size: 0.9rem;
+            color: var(--label-secondary);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .task-progress {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: var(--system-gray5);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: var(--system-blue);
+            border-radius: 3px;
+            width: inherit;
+            transition: width 0.3s ease;
+        }
+
+        .progress-bar.business::after {
+            background: var(--system-green);
+        }
+
+        .task-progress span {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--label-secondary);
+            min-width: 35px;
+        }
+
+        /* Collaboration Section */
+        .collaboration-section {
+            background: var(--bg-grouped-secondary);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 0.5px solid var(--system-gray6);
+            margin-top: 2rem;
+        }
+
+        .collaboration-section h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: var(--label-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .collab-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-primary);
+            border-radius: 12px;
+            box-shadow: var(--shadow-1);
+            transition: all 0.3s var(--spring-1);
+        }
+
+        .collab-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-2);
+        }
+
+        .collab-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .collab-content h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--label-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .collab-content p {
+            font-size: 0.9rem;
+            color: var(--label-secondary);
+            line-height: 1.4;
+        }
+
+        /* Summary Cards Hover Effects */
+        .summary-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-4);
+            border-color: rgba(0, 122, 255, 0.3);
+        }
+
+        /* Summary Group Titles */
+        .summary-group-title {
+            position: relative;
+        }
+
+        .summary-group-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--system-blue), var(--system-purple));
+            border-radius: 2px;
+        }
+
+        @media (max-width: 1024px) {
+            .kanban-board {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+            }
+            
+            .operations-stats {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 1rem;
+            }
+            
+            .featured-projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .step-details {
                 grid-template-columns: 1fr;
             }
@@ -1179,6 +1973,49 @@
                 height: 50px;
                 font-size: 0.7rem;
             }
+            .kanban-board {
+                grid-template-columns: 1fr;
+            }
+            
+            .operations-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .collab-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ops-stat {
+                padding: 1rem;
+            }
+            
+            .kanban-column {
+                padding: 1rem;
+            }
+            
+            .featured-projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .preview-modal-content {
+                width: 95vw !important;
+                height: 90vh !important;
+                max-width: none !important;
+            }
+            
+            .preview-modal-body {
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 1fr 300px !important;
+            }
+            
+            .preview-info-panel {
+                max-height: 300px !important;
+                overflow-y: auto !important;
+            }
         }
 
         @media (max-width: 1024px) {
@@ -1187,6 +2024,160 @@
                 padding: 0.7rem 1.2rem;
             }
         }
+
+        /* 1) iframe에 걸려 있는 고정 크기·scale 해제하고 화면 전체로 넓히기 */
+.preview-modal-iframe {
+  width: 100vw !important;     /* 가로 100% */
+  height: 100vh !important;    /* 세로 100% */
+  transform: none !important;   /* scale(0.6) 제거 */
+}
+
+/* 2) 모달 컨테이너를 화면 전체로 확장 */
+.preview-modal-content {
+  top: 0 !important;           /* 최상단 붙이기 */
+  left: 0 !important;          /* 좌측 끝 붙이기 */
+  transform: none !important;  /* translate(-50%, -50%) 제거 */
+  width: 100vw !important;     /* 가로 100% */
+  height: 100vh !important;    /* 세로 100% */
+  border-radius: 0 !important; /* 모서리 둥글기 제거(원하면) */
+}
+
+/* 3) 오버레이도 화면 전체 덮기 */
+.preview-modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+/* full-screen override: 기존 속성 유지하면서 모달만 화면 전체로 */
+/* 모달 내부에 있는 .preview-modal-content 에만 적용 */
+#project-preview-modal .preview-modal-content {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: var(--bg-primary);
+  overflow: hidden;
+  z-index: 10001;
+}
+
+/* 1) 모달 자체가 보이도록 */
+#project-preview-modal {
+  display: none; /* 기존 그대로 */
+}
+#project-preview-modal.show {
+  display: block !important;  /* show 클래스 붙으면 무조건 보이게 */
+}
+
+/* 2) overlay / content 모두 화면 full-cover */
+#project-preview-modal .preview-modal-overlay {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 10000;
+}
+#project-preview-modal .preview-modal-content {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: var(--bg-primary);
+  box-shadow: none !important;
+  overflow: hidden;
+  z-index: 10001;
+}
+
+/* 3) iframe 은 컨테이너 100% 로 */
+#project-preview-modal .preview-iframe-container,
+#project-preview-modal .preview-iframe-container iframe {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+}
+
+/* (선택) 닫기 버튼이 위로 올라오도록 */
+#project-preview-modal .preview-close-btn {
+  z-index: 10002;
+}
+/* 모달 우측 설명 영역 전체를 2단 그리드로 배치 */
+.preview-project-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 왼쪽(리스트) 1 / 오른쪽(설명) 2 비율 */
+  gap: 1.5rem;                    /* 칸 사이 간격 */
+  align-items: start;             /* 세로 상단 정렬 */
+}
+
+/* UL 은 왼쪽 컬럼, 나머지 텍스트 블록들은 오른쪽 컬럼으로 */
+.preview-project-details > ul {
+  grid-column: 1;
+}
+
+.preview-project-details > :not(ul) {
+  grid-column: 2;
+}
+
+/* 필요하다면 UL 기본 스타일 리셋 */
+.preview-project-details ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.special-feature__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 왼쪽 리스트 1, 오른쪽 설명 2 비율 */
+  gap: 2rem;                     /* 칸 사이 여백 */
+  align-items: start;            /* 세로 정렬: 위쪽에 맞추기 */
+}
+
+/* 왼쪽 컬럼은 리스트, 오른쪽은 설명 전체가 차지 */
+.special-feature__content > .feature-list {
+  grid-column: 1;
+}
+.special-feature__content > .feature-desc {
+  grid-column: 2;
+}
+
+/* 반응형 사용 시 */
+@media (max-width: 768px) {
+  .special-feature__content {
+    grid-template-columns: 1fr; /* 모바일에선 1열 */
+  }
+}
+/* ——— 프로젝트 프리뷰 패널: 왼쪽 목록, 오른쪽 설명 2단 그리드 ——— */
+#project-preview-modal .preview-project-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 리스트 1 / 설명 2 */
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* UL(목록)은 왼쪽, 나머지는 오른쪽 */
+#project-preview-modal .preview-project-details > ul {
+  grid-column: 1;
+}
+#project-preview-modal .preview-project-details > :not(ul) {
+  grid-column: 2;
+}
+
+/* (선택) UL 들여쓰기 리셋 */
+#project-preview-modal .preview-project-details ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+:root {
+    --label-primary: rgba(0, 0, 0, 0.9);
+    --label-secondary: rgba(0, 0, 0, 0.6);
+    --label-tertiary: rgba(0, 0, 0, 0.4);
+}
+</style>
+
     </style>
 </head>
 <body>
@@ -1203,13 +2194,12 @@
         <div class="nav-container">
             <img src="https://www.gldaily.com/gld-kanri/wp-content/themes/gldaily/assets/images/logo.png" alt="Global Daily" class="nav-logo">
             <div class="nav-links">
-                <a href="#summary" class="nav-item active"><span>Summary</span></a>
-                <a href="#analytics" class="nav-item"><span>Analytics</span></a>
-                <a href="#search-seo" class="nav-item"><span>Search & SEO</span></a>
-                <a href="#media" class="nav-item"><span>Media</span></a>
-                <a href="#events-pr" class="nav-item"><span>Events & PR</span></a>
-                <a href="#new-service" class="nav-item"><span>新サービス準備</span></a>
-                <a href="#next-actions" class="nav-item"><span>Next Actions</span></a>
+                <a href="#summary" class="nav-item active"><span>サマリ</span></a>
+                <a href="#analytics" class="nav-item"><span>アナリティクス</span></a>
+                <a href="#media" class="nav-item"><span>メディア掲載</span></a>
+                <a href="#events-pr" class="nav-item"><span>イベント&PR</span></a>
+                <a href="#new-service" class="nav-item"><span>新サービス</span></a>
+                <a href="#operations" class="nav-item"><span>業務ダッシュボード</span></a>
             </div>
         </div>
     </nav>
@@ -1218,30 +2208,36 @@
         <div id="summary" class="tab-pane active">
             <div class="section-header">
                 <h2 class="section-title">Executive Summary</h2>
-                <p class="section-description">2025.6.26 ~ 7.25 活動実績 統合分析</p>
+                <p class="section-description">2025.6.26～7.25 活動サマリ</p>
             </div>
-            <div class="highlight-section">
-                <h3 class="highlight-title">統合Webサイト実績 (GA4 + Search Console)</h3>
-                <div class="metrics-row" style="margin-top: 0;">
-                    <div class="metric-box"><span class="metric-number">13,137</span><div class="metric-text">月間ページビュー</div></div>
-                    <div class="metric-box"><span class="metric-number">847</span><div class="metric-text">検索クリック数</div></div>
-                    <div class="metric-box"><span class="metric-number">3.61%</span><div class="metric-text">平均CTR</div></div>
-                    <div class="metric-box"><span class="metric-number">191</span><div class="metric-text">流入国数 (直近91日)</div></div>
+            
+            <!-- 成果指標 (Outcomes) -->
+            <h3 class="summary-group-title" style="font-size: 1.5rem; font-weight: 700; color: var(--label-primary); margin: 2rem 0 1rem 0; text-align: center;">成果指標</h3>
+            <div class="summary-grid outcomes" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="summary-card outcome-card" style="background: var(--bg-grouped-secondary); border-radius: 20px; padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-2); border: 0.5px solid var(--system-gray6); transition: all 0.3s var(--spring-1);">
+                    <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--label-secondary); margin-bottom: 1rem;">月間PV</h4>
+                    <p style="font-size: 3rem; font-weight: 800; color: var(--system-blue); margin: 0; line-height: 1;">13,137</p>
+                </div>
+                <div class="summary-card outcome-card" style="background: var(--bg-grouped-secondary); border-radius: 20px; padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-2); border: 0.5px solid var(--system-gray6); transition: all 0.3s var(--spring-1);">
+                    <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--label-secondary); margin-bottom: 1rem;">有効お問い合わせ</h4>
+                    <p style="font-size: 3rem; font-weight: 800; color: var(--system-green); margin: 0; line-height: 1;">5件</p>
                 </div>
             </div>
-            <div class="glass-card">
-                <ul class="activity-list">
-                    <li class="activity-item"><span class="activity-tag">Analytics</span>月間ページビュー13,137を記録、前月比+24%の成長を達成</li>
-                    <li class="activity-item"><span class="activity-tag highlight">Search & SEO</span>検索流入847クリック達成、直近91日で1,000キーワード・191カ国からアクセス</li>
-                    <li class="activity-item"><span class="activity-tag">Events & PR</span>8月・9月の外部連携イベント企画・準備を順調に進行中</li>
-                    <li class="activity-item"><span class="activity-tag">新サービス準備</span>新規ソリューション「LP制作パッケージ」の販売準備完了</li>
-                </ul>
+            
+            <!-- 主要イニシアティブ (Major Initiatives) -->
+            <h3 class="summary-group-title" style="font-size: 1.5rem; font-weight: 700; color: var(--label-primary); margin: 2rem 0 1rem 0; text-align: center;">主要イニシアティブ</h3>
+            <div class="summary-grid projects" style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+                <div class="summary-card project-card" style="background: var(--bg-grouped-secondary); border-radius: 20px; padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-2); border: 0.5px solid var(--system-gray6); transition: all 0.3s var(--spring-1);">
+                    <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--label-secondary); margin-bottom: 1rem;">LP制作案件進行中</h4>
+                    <p style="font-size: 3rem; font-weight: 800; color: var(--system-purple); margin: 0; line-height: 1;">4件</p>
+                    <p style="color: var(--label-tertiary); margin-top: 1rem; font-size: 0.95rem;">Japan-Kuru クーポンページ、台湾コラボ、メディア向けページ、セミナーページ</p>
+                </div>
             </div>
         </div>
 
         <div id="analytics" class="tab-pane">
             <div class="analytics-header">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/GAnalytics.png" alt="Google Analytics" class="analytics-logo">
+                <img src="https://exploratory.io/note/exploratory/Google-CxF2SmH0/note_content/libs/exploratory/images/p1.png" alt="Google Analytics" class="analytics-logo">
                 <div class="analytics-info"><div class="analytics-title">Google Analytics 4 実績レポート</div><div class="analytics-period">分析期間：2025.6.26 ~ 7.25</div></div>
             </div>
             <div class="stats-grid">
@@ -1249,6 +2245,13 @@
                 <div class="stat-item"><div class="stat-value">9,466</div><div class="stat-label">アクティブユーザー</div><span class="stat-change positive">+12%</span></div>
                 <div class="stat-item"><div class="stat-value">9,128</div><div class="stat-label">セッション数</div><span class="stat-change positive">+8%</span></div>
                 <div class="stat-item"><div class="stat-value">58s</div><div class="stat-label">平均エンゲージメント時間</div><span class="stat-change positive">+15%</span></div>
+            </div>
+
+            <div class="glass-card">
+                <h3 style="margin-bottom: 2rem; font-weight: 600; text-align: center;">月別 実績推移 (PV & CV)</h3>
+                <div class="chart-container">
+                    <canvas id="pvCvChart"></canvas>
+                </div>
             </div>
             <div class="chart-grid">
                 <div class="chart-wrapper">
@@ -1262,105 +2265,15 @@
                     <div class="chart-container" style="height: 360px;"><canvas id="regionChart"></canvas></div>
                 </div>
             </div>
+            
             <div class="glass-card">
-                <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">人気ページTOP5</h3>
-                <div class="popular-pages-grid">
-                    <div class="page-item" onclick="window.open('https://www.gldaily.com/', '_blank')">
-                        <div class="page-image">
-                            <div class="page-thumbnail">
-                                <div style="font-size: 2rem; color: var(--system-blue);">🏠</div>
-                                <div class="thumbnail-text">Homepage</div>
-                            </div>
-                        </div>
-                        <div class="page-content">
-                            <div class="page-rank">#1</div>
-                            <h4 class="page-title">トップページ</h4>
-                            <div class="page-url">www.gldaily.com/</div>
-                            <div class="page-stats">
-                                <span class="page-views">4,061 PV</span>
-                                <span class="page-badge">CVR改善</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="page-item" onclick="window.open('https://www.gldaily.com/column/44130', '_blank')">
-                        <div class="page-image">
-                            <div class="page-thumbnail">
-                                <div style="font-size: 2rem; color: var(--system-purple);">📰</div>
-                                <div class="thumbnail-text">Column</div>
-                            </div>
-                        </div>
-                        <div class="page-content">
-                            <div class="page-rank">#2</div>
-                            <h4 class="page-title">韓国お盆期間の分析記事</h4>
-                            <div class="page-url">column/44130</div>
-                            <div class="page-stats">
-                                <span class="page-views">754 PV</span>
-                                <span class="page-badge">関連記事</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="page-item" onclick="window.open('https://www.gldaily.com/column/41072', '_blank')">
-                        <div class="page-image">
-                            <div class="page-thumbnail">
-                                <div style="font-size: 2rem; color: var(--system-green);">📊</div>
-                                <div class="thumbnail-text">Analysis</div>
-                            </div>
-                        </div>
-                        <div class="page-content">
-                            <div class="page-rank">#3</div>
-                            <h4 class="page-title">インバウンド市場分析</h4>
-                            <div class="page-url">column/41072</div>
-                            <div class="page-stats">
-                                <span class="page-views">390 PV</span>
-                                <span class="page-badge">内部リンク</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="page-item" onclick="window.open('https://www.gldaily.com/aboutus/company', '_blank')">
-                        <div class="page-image">
-                            <div class="page-thumbnail">
-                                <div style="font-size: 2rem; color: var(--system-orange);">🏢</div>
-                                <div class="thumbnail-text">Company</div>
-                            </div>
-                        </div>
-                        <div class="page-content">
-                            <div class="page-rank">#4</div>
-                            <h4 class="page-title">企業情報ページ</h4>
-                            <div class="page-url">aboutus/company</div>
-                            <div class="page-stats">
-                                <span class="page-views">345 PV</span>
-                                <span class="page-badge">CTA追加</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="page-item" onclick="window.open('https://www.gldaily.com/services/seminars/', '_blank')">
-                        <div class="page-image">
-                            <div class="page-thumbnail">
-                                <div style="font-size: 2rem; color: var(--system-red);">🎯</div>
-                                <div class="thumbnail-text">Seminar</div>
-                            </div>
-                        </div>
-                        <div class="page-content">
-                            <div class="page-rank">#5</div>
-                            <h4 class="page-title">セミナーランディングページ</h4>
-                            <div class="page-url">services/seminars/</div>
-                            <div class="page-stats">
-                                <span class="page-views">322 PV</span>
-                                <span class="page-badge">フォーム改善</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="section-title" style="text-align:center">人気ページ TOP5</h3>
+                <div id="previews"></div>
             </div>
-        </div>
-        
-        <div id="search-seo" class="tab-pane">
-            <div class="analytics-header">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Google Search_Console_logo.svg" alt="Google Search Console" class="analytics-logo">
+            
+            <!-- Search Console セクション -->
+            <div class="analytics-header" style="margin-top: 4rem;">
+                <img src="https://digi-mado.jp/wp-content/uploads/2022/07/search-console-image.png" alt="Google Search Console" class="analytics-logo">
                 <div class="analytics-info"><div class="analytics-title">Google Search Console 検索実績</div><div class="analytics-period">分析期間：直近91日間</div></div>
             </div>
             <div class="stats-grid">
@@ -1397,7 +2310,132 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+            
+           <!-- 유효문의 분석 섹션 - 애플 스타일 개선 -->
+<div class="glass-card" style="margin-top: 2rem;">
+    <h3 class="section-title" style="font-size:1.25rem; text-align:center;">
+        Inquiry Analysis<br>
+        <small style="font-size: 0.9rem; color: var(--label-secondary);">有効なお問い合わせ 5件の詳細</small>
+    </h3>
+    
+    <div class="inquiry-table-wrapper" style="margin-top:1.5rem; overflow-x: auto;">
+        <table class="table" style="width: 100%; border-collapse: separate; border-spacing: 0;">
+            <thead>
+                <tr style="background: rgba(0,0,0,0.03);">
+                    <th style="padding: 1rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">日付</th>
+                    <th style="padding: 1rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">企業名</th>
+                    <th style="padding: 1rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">案件内容</th>
+                    <th style="padding: 1rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">担当</th>
+                    <th style="padding: 1rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">対応状況</th>
+                    <th style="padding: 1rem 0.8rem; text-align: center; font-weight: 600; font-size: 0.85rem; color: var(--label-secondary); border-bottom: 1px solid rgba(0,0,0,0.1);">ステータス</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 재건회 - 거절 -->
+                <tr style="border-bottom: 1px solid rgba(0,0,0,0.06); transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.02)'" onmouseout="this.style.backgroundColor='transparent'">
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">2025-07-01</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-weight: 600; color: var(--label-primary); margin-bottom: 0.2rem;">一般社団法人再健会</div>
+                        <div style="font-size: 0.8rem; color: var(--label-tertiary);">HP → 新規取引</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.9rem; color: var(--label-primary); margin-bottom: 0.3rem;">オンラインクリニック</div>
+                        <div style="font-size: 0.8rem; color: var(--label-secondary);">在日外国人PR</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">田邊</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.85rem; color: var(--label-primary);">医療広告法範囲外にて辞退</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; text-align: center;">
+                        <span style="background: rgba(255, 59, 48, 0.1); color: #d70015; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">対応困難</span>
+                    </td>
+                </tr>
+
+                <!-- 보디샵 - 검토중 -->
+                <tr style="border-bottom: 1px solid rgba(0,0,0,0.06); transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.02)'" onmouseout="this.style.backgroundColor='transparent'">
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">2025-07-02</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-weight: 600; color: var(--label-primary); margin-bottom: 0.2rem;">ザボディショップジャパン㈱</div>
+                        <div style="font-size: 0.8rem; color: var(--label-tertiary);">HP → 新規取引</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.9rem; color: var(--label-primary); margin-bottom: 0.3rem;">REDインフルエンサー施策</div>
+                        <div style="font-size: 0.8rem; color: var(--label-secondary);">マーケティング部</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">田邊</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.85rem; color: var(--label-primary);">パッケージプラン提案済み</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; text-align: center;">
+                        <span style="background: rgba(175, 82, 222, 0.1); color: #8944ab; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">検討中</span>
+                    </td>
+                </tr>
+
+                <!-- 변호사법인 - 진행중 -->
+                <tr style="border-bottom: 1px solid rgba(0,0,0,0.06); transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.02)'" onmouseout="this.style.backgroundColor='transparent'">
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">2025-07-10</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-weight: 600; color: var(--label-primary); margin-bottom: 0.2rem;">弁護士法人あいち刑事事件総合法律事務所</div>
+                        <div style="font-size: 0.8rem; color: var(--label-tertiary);">HP → 新規取引</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.9rem; color: var(--label-primary); margin-bottom: 0.3rem;">在留韓国人向けLP制作</div>
+                        <div style="font-size: 0.8rem; color: var(--label-secondary);">およびPR</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">田邊</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.85rem; color: var(--label-primary); font-weight: 500;">デモサイト完成・2次打合せ予定</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; text-align: center;">
+                        <span style="background: rgba(0, 122, 255, 0.1); color: #0056d3; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">進行中</span>
+                    </td>
+                </tr>
+
+                <!-- FIELD MANAGEMENT EXPAND - 상담예정 -->
+                <tr style="border-bottom: 1px solid rgba(0,0,0,0.06); transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.02)'" onmouseout="this.style.backgroundColor='transparent'">
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">2025-07-14</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-weight: 600; color: var(--label-primary); margin-bottom: 0.2rem;">㈱FIELD MANAGEMENT EXPAND</div>
+                        <div style="font-size: 0.8rem; color: var(--label-tertiary);">HP → 新規取引</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.9rem; color: var(--label-primary); margin-bottom: 0.3rem;">伝統工芸AIプロジェクト</div>
+                        <div style="font-size: 0.8rem; color: var(--label-secondary);">Content Produce Div.</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">菅野</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.85rem; color: var(--label-primary);">会社資料・実績紹介準備中</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; text-align: center;">
+                        <span style="background: rgba(255, 149, 0, 0.1); color: #cc7a00; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">商談予定</span>
+                    </td>
+                </tr>
+
+                <!-- DEITA - 상담확정 -->
+                <tr style="transition: background-color 0.2s ease;" onmouseover="this.style.backgroundColor='rgba(0,0,0,0.02)'" onmouseout="this.style.backgroundColor='transparent'">
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">2025-07-24</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-weight: 600; color: var(--label-primary); margin-bottom: 0.2rem;">㈱DEITA</div>
+                        <div style="font-size: 0.8rem; color: var(--label-tertiary);">HP → 新規取引</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.9rem; color: var(--label-primary); margin-bottom: 0.3rem;">インバウンド飲食店</div>
+                        <div style="font-size: 0.8rem; color: var(--label-secondary);">SNS集客</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; color: var(--label-secondary);">菅野</td>
+                    <td style="padding: 1.2rem 0.8rem;">
+                        <div style="font-size: 0.85rem; color: var(--label-primary);">オンライン打ち合わせ調整済み</div>
+                    </td>
+                    <td style="padding: 1.2rem 0.8rem; text-align: center;">
+                        <span style="background: rgba(52, 199, 89, 0.1); color: #1e8e3e; padding: 0.4rem 0.8rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">商談確定</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
 
         <div id="media" class="tab-pane">
             <div class="section-header">
@@ -1511,7 +2549,7 @@
                                     <h5>➕ 選択式ブースター</h5>
                                     <ul>
                                         <li><span class="icon">📨</span> ZIP 納品</li>
-                                        <li><span class="icon">🏠</span> Japan-Kuru サイト掲載</li>
+                                        <li><span class="icon">🏠</span> JAPANKURU サイト掲載</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1527,7 +2565,7 @@
                                     <p>データ分析／週次レポート</p>
                                 </div>
                                 <div class="step-booster">
-                                    <h5>➕ 選択式ブースター</h5>
+                                    <h5>➕ 選択式　ブースター</h5>
                                     <ul>
                                         <li><span class="icon">🚀</span> 広告ブースト (リスティング・SNS 等)</li>
                                         <li><span class="icon">🤝</span> インフルエンサー配信</li>
@@ -1559,35 +2597,476 @@
             </div>
         </div>
         
-        <div id="next-actions" class="tab-pane">
+        <div id="operations" class="tab-pane">
             <div class="section-header">
-                <h2 class="section-title">Next Actions</h2>
-                <p class="section-description">次月以降の重点実行計画</p>
+                <h2 class="section-title">PR & Digital Operations</h2>
+                <p class="section-description">広報・ウェブ運営・営業支援の統合業務状況</p>
             </div>
-            <div class="glass-card">
-                <h3 style="margin-bottom: 2rem; font-weight: 700;">📝 ウェブサイト改善課題</h3>
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <span class="activity-tag highlight">NEW</span>
-                        <strong>メディア用ページの新規開設</strong>
-                        <p style="margin-top: 0.5rem; color: var(--label-secondary);">報道関係者向けに、調査データや引用ルール、掲載実績、問い合わせ窓口をまとめた専用ページを企画・制作します。</p>
-                    </li>
-                    <li class="activity-item">
-                        <span class="activity-tag">MAINTAIN</span>
-                        <strong>GA4-Search Console 統合分析体制の高度化</strong>
-                        <p style="margin-top: 0.5rem; color: var(--label-secondary);">Looker Studio等を活用しデータ分析・報告プロセスを自動化、深層分析のためのダッシュボードを構築します。</p>
-                    </li>
-                </ul>
+            
+            <!-- 업무 영역별 대시보드 -->
+            <div class="operations-overview">
+                <div class="operations-stats">
+                    <div class="ops-stat core">
+                        <div class="stat-icon">📢</div>
+                        <div class="stat-content">
+                            <div class="stat-number">5</div>
+                            <div class="stat-text">PR Core Tasks</div>
+                        </div>
+                    </div>
+                    <div class="ops-stat tech">
+                        <div class="stat-icon">⚙️</div>
+                        <div class="stat-content">
+                            <div class="stat-number">3</div>
+                            <div class="stat-text">Web Management</div>
+                        </div>
+                    </div>
+                    <div class="ops-stat business">
+                        <div class="stat-icon">💼</div>
+                        <div class="stat-content">
+                            <div class="stat-number">4</div>
+                            <div class="stat-text">Business Support</div>
+                        </div>
+                    </div>
+                    <div class="ops-stat upcoming">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-content">
+                            <div class="stat-number">4</div>
+                            <div class="stat-text">Upcoming Tasks</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card">
-                <h3 style="margin-bottom: 2rem; font-weight: 700;">💡 コンテンツ企画</h3>
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <span class="activity-tag">BLOG</span>
-                        <strong>夏休みシーズンのインバウンドトレンド分析</strong>
-                        <p style="margin-top: 0.5rem; color: var(--label-secondary);">夏休み期間中の訪日客の動向を分析し、関連インサイトを盛り込んだブログコンテンツを発行します。</p>
-                    </li>
-                </ul>
+
+            <!-- 주요 진행 프로젝트 -->
+            <div class="featured-projects-section">
+                <h3 style="text-align: center; margin-bottom: 2rem; font-weight: 700; font-size: 1.5rem;">🔥 主要進行プロジェクト (4件)</h3>
+                <div class="featured-projects-grid">
+                    <!-- Japan-Kuru 쿠폰페이지 -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-status-badge live">制作中</div>
+                            <div class="project-progress-ring">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-blue)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="47" stroke-linecap="round" 
+                                            transform="rotate(-90 30 30)" class="progress-circle"/>
+                                </svg>
+                                <div class="progress-text">70%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-client">Japan-Kuru</span>
+                                <span class="project-type">Landing Page</span>
+                            </div>
+                            <h3 class="project-title">クーポン特化ページ制作</h3>
+                            <p class="project-description">訪日韓国人向けのクーポン配布・利用促進に特化したランディングページ</p>
+                            
+                            <div class="project-preview-container" onclick="showProjectPreview('coupon')">
+                                <div class="preview-placeholder">
+                                    <div class="preview-icon">🎟️</div>
+                                    <div class="preview-label">デモサイト表示</div>
+                                </div>
+                                <div class="preview-overlay">
+                                    <div class="preview-button">🔍 Live Demo</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">2025.8</span>
+                                    <span class="metric-label">目標オープン</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">協議中</span>
+                                    <span class="metric-label">案件規模</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 대만 인플루언서 콜라보 -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-status-badge live">制作中</div>
+                            <div class="project-progress-ring">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-purple)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round" 
+                                            transform="rotate(-90 30 30)" class="progress-circle"/>
+                                </svg>
+                                <div class="progress-text">60%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-client">台湾市場</span>
+                                <span class="project-type">Collaboration</span>
+                            </div>
+                            <h3 class="project-title">テイ先生 x Japan-Kuru コラボ企画</h3>
+                            <p class="project-description">台湾人気インフルエンサーとのコラボレーション特設ページ制作</p>
+                            
+                            <div class="project-preview-container" onclick="showProjectPreview('taiwan')">
+                                <div class="preview-placeholder">
+                                    <div class="preview-icon">🇹🇼</div>
+                                    <div class="preview-label">デモサイト表示</div>
+                                </div>
+                                <div class="preview-overlay">
+                                    <div class="preview-button">🔍 Live Demo</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">2025.8</span>
+                                    <span class="metric-label">目標オープン</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">調整中</span>
+                                    <span class="metric-label">案件規模</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 미디어용 페이지 신설 -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-status-badge live">制作中</div>
+                            <div class="project-progress-ring">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-red)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="78.5" stroke-linecap="round" 
+                                            transform="rotate(-90 30 30)" class="progress-circle"/>
+                                </svg>
+                                <div class="progress-text">50%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-client">Global Daily</span>
+                                <span class="project-type">Media Page</span>
+                            </div>
+                            <h3 class="project-title">メディア用ページをサイト内に新設</h3>
+                            <p class="project-description">報道関係者がいつでも自由にデータをダウンロード・引用できるように</p>
+                            
+                            <div class="project-preview-container" onclick="showProjectPreview('media')">
+                                <div class="preview-placeholder">
+                                    <div class="preview-icon">📰</div>
+                                    <div class="preview-label">プレビュー表示</div>
+                                </div>
+                                <div class="preview-overlay">
+                                    <div class="preview-button">🔍 Page Preview</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">2025.9</span>
+                                    <span class="metric-label">目標オープン</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">社内</span>
+                                    <span class="metric-label">案件規模</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 방일한국인 세미나 페이지 -->
+                    <div class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-status-badge live">制作中</div>
+                            <div class="project-progress-ring">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round" 
+                                            transform="rotate(-90 30 30)" class="progress-circle"/>
+                                </svg>
+                                <div class="progress-text">60%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-client">Global Daily</span>
+                                <span class="project-type">Seminar Page</span>
+                            </div>
+                            <h3 class="project-title">訪日韓国人市場向けセミナーページ</h3>
+                            <p class="project-description">韓国市場の最新トレンドと効果的なアプローチ方法を解説するセミナー特設ページ</p>
+                            
+                            <div class="project-preview-container" onclick="showProjectPreview('seminar')">
+                                <div class="preview-placeholder">
+                                    <div class="preview-icon">🇰🇷</div>
+                                    <div class="preview-label">デモサイト表示</div>
+                                </div>
+                                <div class="preview-overlay">
+                                    <div class="preview-button">🔍 Page Preview</div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">2025.8</span>
+                                    <span class="metric-label">目標オープン</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">社内</span>
+                                    <span class="metric-label">案件規模</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 칸반 스타일 업무 보드 -->
+            <div class="kanban-board">
+                <!-- 홍보 핵심 업무 -->
+                <div class="kanban-column">
+                    <div class="column-header core">
+                        <h3>📢 PR Core Operations</h3>
+                        <span class="task-count">5 tasks</span>
+                    </div>
+                    <div class="kanban-tasks">
+                        <div class="task-card in-progress">
+                            <div class="task-status">構築中</div>
+                            <h4>活動統合ダッシュボード構築</h4>
+                            <p>一目でわかる月次実績・進捗管理システム</p>
+                            <div class="task-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card maintenance">
+                            <div class="task-status">継続中</div>
+                            <h4>PV・CV向上施策の継続実行</h4>
+                            <p>ブログ記事・SNS投稿・SEO最適化</p>
+                        </div>
+                        
+                        <div class="task-card in-progress">
+                            <div class="task-status">準備中</div>
+                            <h4>ISI日本語学校 企業見学</h4>
+                            <p>8/28 イベント準備・資料作成</p>
+                            <div class="task-progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress">
+                            <div class="task-status">準備中</div>
+                            <h4>訪日韓国人向けセミナー</h4>
+                            <p>9月開催予定オンラインセミナー企画</p>
+                            <div class="task-progress">
+                                <div class="progress-bar" style="width: 40%"></div>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card maintenance">
+                            <div class="task-status">継続中</div>
+                            <h4>メディア対応・掲載管理</h4>
+                            <p>報道関係者対応・実績管理</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 웹사이트 기술 관리 -->
+                <div class="kanban-column">
+                    <div class="column-header tech">
+                        <h3>⚙️ Website Management</h3>
+                        <span class="task-count">3 tasks</span>
+                    </div>
+                    <div class="kanban-tasks">
+                        <div class="task-card urgent">
+                            <div class="task-status">優先</div>
+                            <h4>GA4内部構築・再設定</h4>
+                            <p>分析体制の高度化・自動化</p>
+                        </div>
+                        
+                        <div class="task-card maintenance">
+                            <div class="task-status">継続中</div>
+                            <h4>サイト全体保守・更新</h4>
+                            <p>コンテンツ更新・機能改善</p>
+                        </div>
+                        
+                        <div class="task-card maintenance">
+                            <div class="task-status">継続中</div>
+                            <h4>SEO最適化・分析</h4>
+                            <p>検索流入改善・キーワード管理</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 영업 지원 업무 -->
+                <div class="kanban-column">
+                    <div class="column-header business">
+                        <h3>💼 Business Support</h3>
+                        <span class="task-count">4 tasks</span>
+                    </div>
+                    <div class="kanban-tasks">
+                        <div class="task-card in-progress">
+                            <div class="task-status">制作中</div>
+                            <h4>Japan-Kuru クーポンページ</h4>
+                            <p>韓国人向け特化LP（8月目標）</p>
+                            <div class="task-progress">
+                                <div class="progress-bar business" style="width: 70%"></div>
+                                <span>70%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress">
+                            <div class="task-status">制作中</div>
+                            <h4>テイ先生コラボページ</h4>
+                            <p>台湾インフルエンサー連携（8月目標）</p>
+                            <div class="task-progress">
+                                <div class="progress-bar business" style="width: 60%"></div>
+                                <span>60%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress">
+                            <div class="task-status">制作中</div>
+                            <h4>メディア向けダウンロードページ</h4>
+                            <p>報道資料・画像配布用ページ（8月目標）</p>
+                            <div class="task-progress">
+                                <div class="progress-bar business" style="width: 50%"></div>
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress">
+                            <div class="task-status">制作中</div>
+                            <h4>韓国市場セミナーページ</h4>
+                            <p>オンラインセミナー特設ページ（8月目標）</p>
+                            <div class="task-progress">
+                                <div class="progress-bar business" style="width: 60%"></div>
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 향후 프로젝트 -->
+                <div class="kanban-column">
+                    <div class="column-header upcoming">
+                        <h3>📋 Upcoming Projects</h3>
+                        <span class="task-count">2 tasks</span>
+                    </div>
+                    <div class="kanban-tasks">
+                        <div class="task-card future">
+                            <div class="task-status">提案中</div>
+                            <h4>企業向けLP制作案件 (2件)</h4>
+                            <p>営業部と協業・クライアント提案中 (受注待ち)</p>
+                        </div>
+                        
+                        <div class="task-card future">
+                            <div class="task-status">展開準備</div>
+                            <h4>LP制作パッケージ営業展開</h4>
+                            <p>新サービス本格販売準備</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 미래 계획 -->
+                <div class="kanban-column">
+                    <div class="column-header upcoming">
+                        <h3>🔮 Future Plans</h3>
+                        <span class="task-count">2 tasks</span>
+                    </div>
+                    <div class="kanban-tasks">
+                        <div class="task-card future">
+                            <div class="task-status">新規企画</div>
+                            <h4>会社紹介資料リニューアル</h4>
+                            <p>関連動画や会社紹介書等すべて更新</p>
+                        </div>
+                        
+                        <div class="task-card future">
+                            <div class="task-status">技術改善</div>
+                            <h4>サイト速度最適化</h4>
+                            <p>Core Web Vitals改善</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 다음달 주요 일정 -->
+            <div class="collaboration-section">
+                <h3>📅 来月の主要スケジュール (8月)</h3>
+                <div class="collab-grid">
+                    <div class="collab-item">
+                        <div class="collab-icon">🏫</div>
+                        <div class="collab-content">
+                            <h4>ISI日本語学校 企業見学</h4>
+                            <p>8/28 - 未来のグローバル人材との関係構築</p>
+                        </div>
+                    </div>
+                    <div class="collab-item">
+                        <div class="collab-icon">🎟️</div>
+                        <div class="collab-content">
+                            <h4>Japan-Kuru クーポンページ</h4>
+                            <p>8月中旬 - 韓国人向け特化LP公開予定</p>
+                        </div>
+                    </div>
+                    <div class="collab-item">
+                        <div class="collab-icon">🇹🇼</div>
+                        <div class="collab-content">
+                            <h4>テイ先生コラボページ</h4>
+                            <p>8月下旬 - 台湾インフルエンサー連携開始</p>
+                        </div>
+                    </div>
+                    <div class="collab-item">
+                        <div class="collab-icon">🇰🇷</div>
+                        <div class="collab-content">
+                            <h4>韓国市場セミナーページ</h4>
+                            <p>8月下旬 - セミナー特設ページ公開</p>
+                        </div>
+                    </div>
+                    <div class="collab-item">
+                        <div class="collab-icon">📰</div>
+                        <div class="collab-content">
+                            <h4>メディア向けページオープン</h4>
+                            <p>8月下旬 - 報道資料ダウンロードページ公開</p>
+                        </div>
+                    </div>
+                    <div class="collab-item">
+                        <div class="collab-icon">📊</div>
+                        <div class="collab-content">
+                            <h4>月次レポート作成</h4>
+                            <p>8月末 - 7月実績・8月活動総括</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로젝트 프리뷰 모달 -->
+            <div class="project-preview-modal" id="project-preview-modal">
+                <div class="preview-modal-overlay" onclick="closeProjectPreview()"></div>
+                <div class="preview-modal-content">
+                    <div class="preview-modal-header">
+                        <h3 id="preview-modal-title">プロジェクト プレビュー</h3>
+                        <button onclick="closeProjectPreview()" class="preview-close-btn">×</button>
+                    </div>
+                    <div class="preview-modal-body">
+                        <div class="preview-iframe-container">
+                            <iframe id="project-preview-iframe" class="preview-modal-iframe" src="" frameborder="0"></iframe>
+                        </div>
+                        <div class="preview-info-panel">
+                            <div class="preview-project-info" id="preview-project-info">
+                                <!-- 동적으로 채워질 프로젝트 정보 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1598,73 +3077,139 @@
     </footer>
 
     <script>
-        // Chart.js 로딩 확인 후 실행
-        function initializeApp() {
-            if (typeof Chart === 'undefined') {
-                console.log('Chart.js is loading...');
-                setTimeout(initializeApp, 100);
-                return;
-            }
+      function initializeApp() {
 
-            // Chart.js Apple-style configuration
-            Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, system-ui, sans-serif';
-            Chart.defaults.font.size = 13;
-            Chart.defaults.color = '#3C3C43';
+    const tabLinks = document.querySelectorAll('.nav-item');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
-            const commonChartOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            padding: 20,
-                            usePointStyle: true,
-                            pointStyle: 'circle',
-                            font: { size: 12, weight: '600' }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: '#F2F2F7',
-                            drawBorder: false
-                        },
-                        border: { display: false },
-                        ticks: {
-                            color: '#8E8E93',
-                            font: { size: 12, weight: '500' }
-                        }
-                    },
-                    x: {
-                        grid: { display: false },
-                        border: { display: false },
-                        ticks: {
-                            color: '#8E8E93',
-                            font: { size: 12, weight: '500' }
-                        }
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index'
-                }
-            };
+    // 탭 클릭 리스너: 딱 한 번만 등록
+    tabLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        // 모든 탭·패널 비활성화
+        tabLinks.forEach(l => l.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+        // 클릭된 탭·패널만 활성화
+        this.classList.add('active');
+        target && target.classList.add('active');
+        // 탭 전환 후 analytics 탭이라면 차트 렌더링
+       if (target && target.id === 'analytics') {
+         renderAnalyticsCharts();
+         renderSearchCharts();
+         }
+      });
+    });
 
-            // Enhanced scroll effect for navigation
-            window.addEventListener('scroll', () => {
-                const nav = document.querySelector('.nav-section');
-                nav.classList.toggle('scrolled', window.scrollY > 20);
-            });
+    const charts = {}; // Chart 인스턴스 저장용
+    if (typeof Chart === 'undefined') {
+      console.log('Chart.js is loading...');
+      setTimeout(initializeApp, 100);
+      return;
+    }
 
-            const tabLinks = document.querySelectorAll('.nav-item');
-            const tabPanes = document.querySelectorAll('.tab-pane');
-            const charts = {}; // Object to store chart instances
+    // Chart.js Apple-style 기본 설정
+    Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, system-ui, sans-serif';
+    Chart.defaults.font.size = 13;
+    Chart.defaults.color = '#3C3C43';
+
+    const commonChartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            padding: 20,
+            usePointStyle: true,
+            pointStyle: 'circle',
+            font: { size: 12, weight: '600' }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          grid: { color: '#F2F2F7', drawBorder: false },
+          border: { display: false },
+          ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
+        },
+        x: {
+          grid: { display: false },
+          border: { display: false },
+          ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
+        }
+      },
+      interaction: { intersect: false, mode: 'index' }
+    };
+
+    // 네비게이션 스크롤 효과
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav-section');
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+     
+
+        
 
             // Chart rendering functions with Apple Health style
             function renderAnalyticsCharts() {
+                // PV & CV 차트
+                if (!charts.pvCvChart) {
+                    const pvCvCanvas = document.getElementById('pvCvChart');
+                    if (pvCvCanvas) {
+                        const ctxPvCv = pvCvCanvas.getContext('2d');
+                        charts.pvCvChart = new Chart(ctxPvCv, {
+                            type: 'bar',
+                            data: {
+                                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+                                datasets: [
+                                    {
+                                        type: 'bar',
+                                        label: 'ページビュー',
+                                        data: [15500, 16080, 19113, 14314, 11054, 10609, 13137],
+                                        backgroundColor: 'rgba(0, 122, 255, 0.6)', // system-blue
+                                        yAxisID: 'y_pv',
+                                    },
+                                    {
+                                        type: 'line',
+                                        label: '有効な問い合わせ',
+                                        data: [3, 4, 6, 4, 3, 2, 5],
+                                        borderColor: '#FF3B30', // system-red
+                                        backgroundColor: '#FF3B30',
+                                        tension: 0.3,
+                                        yAxisID: 'y_cv',
+                                    }
+                                ]
+                            },
+                            options: {
+                                ...commonChartOptions,
+                                scales: {
+                                    x: {
+                                        ...commonChartOptions.scales.x
+                                    },
+                                    y_pv: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'left',
+                                        title: { display: true, text: 'ページビュー' },
+                                        grid: { color: '#F2F2F7' },
+                                        ticks: { color: '#8E8E93' }
+                                    },
+                                    y_cv: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'right',
+                                        title: { display: true, text: '有効な問い合わせ (件)' },
+                                        grid: { drawOnChartArea: false },
+                                        ticks: { stepSize: 1, color: '#8E8E93' }
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+
                 if (!charts.channelChart) {
                     const channelCanvas = document.getElementById('channelChart');
                     if (channelCanvas) {
@@ -1677,12 +3222,12 @@
                                     label: 'Sessions',
                                     data: [5033, 1552, 750, 158, 107, 64],
                                     backgroundColor: [
-                                        '#007AFF', // system-blue
-                                        '#AF52DE', // system-purple
-                                        '#34C759', // system-green
-                                        '#FF9500', // system-orange
-                                        '#FF3B30', // system-red
-                                        '#8E8E93'  // system-gray
+                                        '#007AFF',
+                                        '#AF52DE',
+                                        '#34C759',
+                                        '#FF9500',
+                                        '#FF3B30',
+                                        '#8E8E93'
                                     ],
                                     borderRadius: 8,
                                     borderWidth: 0
@@ -1697,6 +3242,7 @@
                         });
                     }
                 }
+
                 if (!charts.regionChart) {
                     const regionCanvas = document.getElementById('regionChart');
                     if (regionCanvas) {
@@ -1704,15 +3250,20 @@
                         charts.regionChart = new Chart(ctxRegion, {
                             type: 'doughnut',
                             data: {
-                                labels: ['関東地方', '近畿地方', '中部地方', '九州地方', 'その他'],
+                                labels: [
+                                    '新宿区','港区','千代田区','渋谷区',
+                                    '大阪市','名古屋市','横浜市',
+                                    'その他'
+                                ],
                                 datasets: [{
-                                    data: [3651, 2282, 1369, 911, 915],
+                                    data: [
+                                        964, 913, 616, 588,
+                                        1024, 546, 487,
+                                        3380
+                                    ],
                                     backgroundColor: [
-                                        '#007AFF', // system-blue
-                                        '#AF52DE', // system-purple
-                                        '#34C759', // system-green
-                                        '#FF9500', // system-orange
-                                        '#8E8E93'  // system-gray
+                                        '#007AFF', '#AF52DE', '#34C759', '#FF9500',
+                                        '#FFCC00', '#30B0FF', '#5856D6', '#8E8E93'
                                     ],
                                     borderWidth: 0,
                                     cutout: '70%'
@@ -1807,38 +3358,11 @@
                                 }
                             }
                         });
+                    
                     }
                 }
             }
 
-            // Enhanced tab click listener with smooth animation
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetPane = document.querySelector(targetId);
-
-                    // Remove active classes
-                    tabLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-
-                    tabPanes.forEach(p => p.classList.remove('active'));
-
-                    // Show target pane
-                    if (targetPane) {
-                        targetPane.classList.add('active');
-                        
-                        // Render charts only when the tab is shown
-                        setTimeout(() => {
-                            if (targetId === '#analytics') {
-                                renderAnalyticsCharts();
-                            } else if (targetId === '#search-seo') {
-                                renderSearchCharts();
-                            }
-                        }, 100);
-                    }
-                });
-            });
 
             // Demo site functions
             window.showDemo = function(demoType) {
@@ -1846,17 +3370,16 @@
                 const iframe = document.getElementById('demo-iframe');
                 const title = document.getElementById('demo-title');
                 
-                // Demo URLs (실제 URLs로 교체 가능)
                 const demoUrls = {
-                    'demoA': 'https://www.gldaily.com/demo/site-a/',
-                    'demoB': 'https://www.gldaily.com/demo/site-b/', 
-                    'demoC': 'https://www.gldaily.com/proposal/standard/'
+                    'demoA': 'https://yourjuli76.github.io/LP/marunouchi.index.html',
+                    'demoB': 'https://yourjuli76.github.io/LP/aichi_B_2.html', 
+                    'demoC': 'https://yourjuli76.github.io/LP/lawer_briefing_index.html#sec1'
                 };
                 
                 const demoTitles = {
-                    'demoA': 'デモサイト A - インバウンド特化LP',
-                    'demoB': 'デモサイト B - 企業向けソリューション',
-                    'demoC': '標準提案書 - LP制作パッケージ'
+                    'demoA': 'デモサイト A - AREA特化LP',
+                    'demoB': 'デモサイト B - 弁護士事務所特化LP',
+                    'demoC': '標準提案書 - LP制作・PRパッケージ企画サマリ'
                 };
 
                 // Reset button styles
@@ -1897,6 +3420,263 @@
 
         // DOM 로딩 완료 후 실행
         document.addEventListener('DOMContentLoaded', initializeApp);
+
+        const articles = [
+            { 
+                url: 'https://www.gldaily.com/', 
+                pv: 4061, 
+                tag: 'CVR改善' 
+            },
+            { 
+                url: 'https://www.gldaily.com/news/columns/columns44130/', 
+                pv: 754, 
+                tag: '関連記事' 
+            },
+            { 
+                url: 'https://www.gldaily.com/news/columns/columns41072/', 
+                pv: 390, 
+                tag: '内部リンク' 
+            },
+            { 
+                url: 'https://www.gldaily.com/aboutus/company/', 
+                pv: 345, 
+                tag: 'CTA追加' 
+            },
+            { 
+                url: 'https://www.gldaily.com/services/seminars/', 
+                pv: 390, 
+                tag: 'フォーム改善' 
+            },
+        ];
+
+        async function fetchMetadata(url) {
+            const proxy = 'https://api.allorigins.win/raw?url=';
+            const res   = await fetch(proxy + encodeURIComponent(url));
+            if (!res.ok) throw new Error('メタデータ불러오기 실패');
+            
+            const html = await res.text();
+            const doc  = new DOMParser().parseFromString(html, 'text/html');
+
+            const og = sel => doc.querySelector(sel)?.content || '';
+            return {
+                title:       og('meta[property="og:title"]')       || doc.title,
+                description: og('meta[name="description"]')        || '',
+                image:       og('meta[property="og:image"]')       || ''
+            };
+        }
+
+        async function renderPreviews() {
+            const container = document.getElementById('previews');
+            for (let item of articles) {
+                const { title, description, image } = await fetchMetadata(item.url);
+                const card = document.createElement('div');
+                card.className = 'preview-card';
+                card.innerHTML = `
+                    ${ image
+                        ? `<img src="${image}" alt="thumbnail">`
+                        : `<div style="width:120px;height:80px;background:#eee;border-radius:4px;"></div>`
+                    }
+                    <div class="preview-info">
+                        <h4><a href="${item.url}" target="_blank" rel="noopener">${title}</a></h4>
+                        <p>${description}</p>
+                        <div class="preview-meta">
+                            <span class="pv-badge">${item.pv.toLocaleString()} PV</span>
+                            <span class="tag-badge">${item.tag}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderPreviews);
+   
+        // Project Preview Functions
+        window.showProjectPreview = function(projectType) {
+            const modal = document.getElementById('project-preview-modal');
+            const iframe = document.getElementById('project-preview-iframe');
+            const title = document.getElementById('preview-modal-title');
+            const infoPanel = document.getElementById('preview-project-info');
+            
+            const projectData = {
+                'coupon': {
+                    title: 'Japan-Kuru クーポンページ',
+                    url: 'https://yourjuli76.github.io/japankuru_coupon0711/index.html',
+                    info: `
+                        <div class="preview-project-details">
+                            <h4>プロジェクト概要</h4>
+                            <p>訪日韓国人をターゲットにしたクーポン配布・利用促進に特化したランディングページです。</p>
+                            
+                            <h4>主要機能</h4>
+                            <ul>
+                                <li>多様なクーポン表示システム</li>
+                                <li>モバイル最適化デザイン</li>
+                                <li>SNSシェア機能</li>
+                                <li>利用統計ダッシュボード</li>
+                            </ul>
+                            
+                            <h4>期待効果</h4>
+                            <div class="effect-metrics">
+                                <div class="effect-item">
+                                    <span class="effect-value">+40%</span>
+                                    <span class="effect-label">クーポン利用率向上</span>
+                                </div>
+                                <div class="effect-item">
+                                    <span class="effect-value">+25%</span>
+                                    <span class="effect-label">新規ユーザー獲得</span>
+                                </div>
+                            </div>
+                            
+                            <h4>技術スタック</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">React</span>
+                                <span class="tech-item">TypeScript</span>
+                                <span class="tech-item">Tailwind CSS</span>
+                                <span class="tech-item">Firebase</span>
+                            </div>
+                        </div>
+                    `
+                },
+                'taiwan': {
+                    title: 'テイ先生コラボレーション特設ページ',
+                    url: 'https://yourjuli76.github.io/teisensei/0722_index.html',
+                    info: `
+                        <div class="preview-project-details">
+                            <h4>プロジェクト概要</h4>
+                            <p>台湾の人気インフルエンサー「テイ先生」とのコラボレーション企画専用ランディングページです。</p>
+                            
+                            <h4>コンテンツ内容</h4>
+                            <ul>
+                                <li>テイ先生おすすめスポット紹介</li>
+                                <li>限定クーポン・特典配布</li>
+                                <li>ファン向け特別企画</li>
+                                <li>コラボ動画・写真ギャラリー</li>
+                            </ul>
+                            
+                            <h4>マーケティング効果</h4>
+                            <div class="effect-metrics">
+                                <div class="effect-item">
+                                    <span class="effect-value">50万</span>
+                                    <span class="effect-label">推定リーチ数</span>
+                                </div>
+                                <div class="effect-item">
+                                    <span class="effect-value">+60%</span>
+                                    <span class="effect-label">台湾市場認知度向上</span>
+                                </div>
+                            </div>
+                            
+                            <h4>多言語対応</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">繁體中文</span>
+                                <span class="tech-item">日本語</span>
+                                <span class="tech-item">English</span>
+                            </div>
+                        </div>
+                    `
+                },
+                'media': {
+                    title: 'メディア向けダウンロードページ',
+                    url: 'https://yourjuli76.github.io/GLDHP/media.index.html',
+                    info: `
+                        <div class="preview-project-details">
+                            <h4>プロジェクト概要</h4>
+                            <p>報道関係者が自由にデータや画像をダウンロード・引用できる専用ページです。</p>
+                            
+                            <h4>提供コンテンツ</h4>
+                            <ul>
+                                <li>会社概要・ロゴデータ</li>
+                                <li>市場調査レポート（PDF）</li>
+                                <li>統計データ（Excel・CSV）</li>
+                                <li>プレスリリース履歴</li>
+                                <li>代表者プロフィール・写真</li>
+                            </ul>
+                            
+                            <h4>期待効果</h4>
+                            <div class="effect-metrics">
+                                <div class="effect-item">
+                                    <span class="effect-value">+150%</span>
+                                    <span class="effect-label">メディア掲載数向上</span>
+                                </div>
+                                <div class="effect-item">
+                                    <span class="effect-value">24時間</span>
+                                    <span class="effect-label">資料提供時間短縮</span>
+                                </div>
+                            </div>
+                            
+                            <h4>機能</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">ワンクリックDL</span>
+                                <span class="tech-item">利用統計</span>
+                                <span class="tech-item">自動更新</span>
+                            </div>
+                        </div>
+                    `
+                },
+                'seminar': {
+                    title: '訪日韓国人市場向けセミナーページ',
+                    url: 'https://yourjuli76.github.io/seminar/ko.index.html',
+                    info: `
+                        <div class="preview-project-details">
+                            <h4>プロジェクト概要</h4>
+                            <p>訪日韓国人市場の最新トレンドと効果的なアプローチ方法を解説するオンラインセミナー専用ページです。</p>
+                            
+                            <h4>セミナー内容</h4>
+                            <ul>
+                                <li>2025年韓国人旅行トレンド分析</li>
+                                <li>効果的なマーケティング手法</li>
+                                <li>成功事例とケーススタディ</li>
+                                <li>質疑応答・個別相談</li>
+                            </ul>
+                            
+                            <h4>想定参加者</h4>
+                            <div class="effect-metrics">
+                                <div class="effect-item">
+                                    <span class="effect-value">100名</span>
+                                    <span class="effect-label">目標参加者数</span>
+                                </div>
+                                <div class="effect-item">
+                                    <span class="effect-value">30社</span>
+                                    <span class="effect-label">企業参加予定</span>
+                                </div>
+                            </div>
+                            
+                            <h4>機能</h4>
+                            <div class="tech-stack">
+                                <span class="tech-item">事前申込</span>
+                                <span class="tech-item">Zoom連携</span>
+                                <span class="tech-item">資料DL</span>
+                                <span class="tech-item">アンケート</span>
+                            </div>
+                        </div>
+                    `
+                }
+            };
+            
+            const project = projectData[projectType];
+            if (!project) return;
+            
+            // Update modal content
+            title.textContent = project.title;
+            iframe.src = project.url;
+            infoPanel.innerHTML = project.info;
+            
+            // Show modal
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        };
+
+        window.closeProjectPreview = function() {
+            const modal = document.getElementById('project-preview-modal');
+            const iframe = document.getElementById('project-preview-iframe');
+            
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                iframe.src = '';
+            }, 300);
+        };  
     </script>
 </body>
 </html>
