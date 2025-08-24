@@ -21,7 +21,7 @@
             --system-red: #FF3B30;
             --system-teal: #5AC8FA;
             --system-yellow: #FFCC00;
-           
+            
             /* Apple Grays */
             --system-gray: #8E8E93;
             --system-gray2: #AEAEB2;
@@ -29,7 +29,7 @@
             --system-gray4: #D1D1D6;
             --system-gray5: #E5E5EA;
             --system-gray6: #F2F2F7;
-           
+            
             /* Semantic Colors */
             --label-primary: #000000;
             --label-secondary: #3C3C43;
@@ -39,27 +39,27 @@
             --fill-secondary: #78788014;
             --fill-tertiary: #7878800F;
             --fill-quaternary: #7878800A;
-           
+            
             /* Background Colors */
             --bg-primary: #FFFFFF;
             --bg-secondary: #F2F2F7;
             --bg-tertiary: #FFFFFF;
             --bg-grouped-primary: #F2F2F7;
             --bg-grouped-secondary: #FFFFFF;
-           
+            
             /* Apple Blur & Materials */
             --material-thick: rgba(255, 255, 255, 0.9);
             --material-regular: rgba(255, 255, 255, 0.8);
             --material-thin: rgba(255, 255, 255, 0.7);
             --material-ultra-thin: rgba(255, 255, 255, 0.6);
-           
+            
             /* Apple Shadows */
             --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12);
             --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.12);
             --shadow-3: 0 4px 16px rgba(0, 0, 0, 0.12);
             --shadow-4: 0 8px 24px rgba(0, 0, 0, 0.12);
             --shadow-5: 0 16px 40px rgba(0, 0, 0, 0.15);
-           
+            
             /* Apple Motion */
             --spring-1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
             --spring-2: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -84,9 +84,9 @@
 
         /* Hero Section - iOS 17 Style */
         .hero-section {
-            background: linear-gradient(180deg,
-                var(--bg-primary) 0%,
-                var(--bg-secondary) 50%,
+            background: linear-gradient(180deg, 
+                var(--bg-primary) 0%, 
+                var(--bg-secondary) 50%, 
                 var(--bg-grouped-primary) 100%);
             padding: 5rem 0 4rem;
             position: relative;
@@ -100,7 +100,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background:
+            background: 
                 radial-gradient(circle at 20% 20%, rgba(0, 122, 255, 0.08) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(175, 82, 222, 0.06) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, rgba(52, 199, 89, 0.04) 0%, transparent 50%);
@@ -135,8 +135,8 @@
             margin-bottom: 1rem;
             letter-spacing: -0.05em;
             line-height: 0.9;
-            background: linear-gradient(135deg,
-                var(--label-primary) 0%,
+            background: linear-gradient(135deg, 
+                var(--label-primary) 0%, 
                 var(--label-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -321,9 +321,9 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg,
-                transparent,
-                rgba(255, 255, 255, 0.8),
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.8), 
                 transparent);
         }
 
@@ -360,8 +360,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg,
-                rgba(0, 122, 255, 0.05) 0%,
+            background: linear-gradient(135deg, 
+                rgba(0, 122, 255, 0.05) 0%, 
                 rgba(175, 82, 222, 0.05) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -459,8 +459,8 @@
 
         /* Highlight Section - iOS Dynamic Island Style */
         .highlight-section {
-            background: linear-gradient(135deg,
-                var(--material-thick) 0%,
+            background: linear-gradient(135deg, 
+                var(--material-thick) 0%, 
                 rgba(0, 122, 255, 0.08) 100%);
             backdrop-filter: blur(20px) saturate(180%);
             border: 0.5px solid rgba(255, 255, 255, 0.3);
@@ -480,8 +480,8 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle,
-                rgba(0, 122, 255, 0.08) 0%,
+            background: radial-gradient(circle, 
+                rgba(0, 122, 255, 0.08) 0%, 
                 transparent 70%);
             animation: rotate 30s linear infinite;
         }
@@ -565,8 +565,8 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(135deg,
-                var(--system-blue),
+            background: linear-gradient(135deg, 
+                var(--system-blue), 
                 var(--system-purple));
             border-radius: 0 2px 2px 0;
             transition: width 0.3s var(--spring-1);
@@ -583,8 +583,8 @@
         }
 
         .activity-tag {
-            background: linear-gradient(135deg,
-                var(--label-primary),
+            background: linear-gradient(135deg, 
+                var(--label-primary), 
                 var(--label-secondary));
             color: var(--bg-primary);
             padding: 0.4rem 0.8rem;
@@ -599,8 +599,8 @@
         }
 
         .activity-tag.highlight {
-            background: linear-gradient(135deg,
-                var(--system-blue),
+            background: linear-gradient(135deg, 
+                var(--system-blue), 
                 var(--system-purple));
         }
 
@@ -830,8 +830,8 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(180deg,
-                var(--system-blue),
+            background: linear-gradient(180deg, 
+                var(--system-blue), 
                 var(--system-purple));
             border-radius: 2px;
         }
@@ -852,8 +852,8 @@
             width: 65px;
             height: 65px;
             border-radius: 50%;
-            background: linear-gradient(135deg,
-                var(--system-blue),
+            background: linear-gradient(135deg, 
+                var(--system-blue), 
                 var(--system-purple));
             color: var(--bg-primary);
             display: flex;
@@ -923,9 +923,9 @@
         .image-placeholder {
             width: 100%;
             height: 280px;
-            background: linear-gradient(135deg,
-                var(--system-gray6) 0%,
-                var(--bg-primary) 50%,
+            background: linear-gradient(135deg, 
+                var(--system-gray6) 0%, 
+                var(--bg-primary) 50%, 
                 var(--system-gray5) 100%);
             border: 0.5px solid var(--system-gray5);
             border-radius: 20px;
@@ -948,9 +948,9 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg,
-                transparent,
-                rgba(255, 255, 255, 0.7),
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.7), 
                 transparent);
             transition: left 0.6s ease;
         }
@@ -1184,8 +1184,8 @@
 
         /* PR & Digital Operations Dashboard */
         .operations-overview {
-            background: linear-gradient(135deg,
-                var(--material-thick) 0%,
+            background: linear-gradient(135deg, 
+                var(--material-thick) 0%, 
                 rgba(0, 122, 255, 0.05) 100%);
             border-radius: 24px;
             padding: 2.5rem;
@@ -1276,8 +1276,8 @@
         }
 
         .project-card.featured {
-            background: linear-gradient(135deg,
-                var(--bg-grouped-secondary) 0%,
+            background: linear-gradient(135deg, 
+                var(--bg-grouped-secondary) 0%, 
                 rgba(0, 122, 255, 0.03) 100%);
             border-color: rgba(0, 122, 255, 0.2);
         }
@@ -1416,8 +1416,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg,
-                rgba(0, 122, 255, 0.9),
+            background: linear-gradient(135deg, 
+                rgba(0, 122, 255, 0.9), 
                 rgba(175, 82, 222, 0.9));
             display: flex;
             align-items: center;
@@ -1925,16 +1925,16 @@
                 grid-template-rows: auto;
                 gap: 1.5rem;
             }
-           
+            
             .operations-stats {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                 gap: 1rem;
             }
-           
+            
             .featured-projects-grid {
                 grid-template-columns: 1fr;
             }
-           
+            
             .step-details {
                 grid-template-columns: 1fr;
             }
@@ -1976,42 +1976,42 @@
             .kanban-board {
                 grid-template-columns: 1fr;
             }
-           
+            
             .operations-stats {
                 grid-template-columns: 1fr;
             }
-           
+            
             .collab-grid {
                 grid-template-columns: 1fr;
             }
-           
+            
             .ops-stat {
                 padding: 1rem;
             }
-           
+            
             .kanban-column {
                 padding: 1rem;
             }
-           
+            
             .featured-projects-grid {
                 grid-template-columns: 1fr;
             }
-           
+            
             .project-metrics {
                 grid-template-columns: 1fr;
             }
-           
+            
             .preview-modal-content {
                 width: 95vw !important;
                 height: 90vh !important;
                 max-width: none !important;
             }
-           
+            
             .preview-modal-body {
                 grid-template-columns: 1fr !important;
                 grid-template-rows: 1fr 300px !important;
             }
-           
+            
             .preview-info-panel {
                 max-height: 300px !important;
                 overflow-y: auto !important;
@@ -2210,7 +2210,7 @@
                 <h2 class="section-title">Executive Summary</h2>
                 <p class="section-description">2025.6.26～7.25 活動サマリ</p>
             </div>
-           
+            
             <!-- 成果指標 (Outcomes) -->
             <h3 class="summary-group-title" style="font-size: 1.5rem; font-weight: 700; color: var(--label-primary); margin: 2rem 0 1rem 0; text-align: center;">成果指標</h3>
             <div class="summary-grid outcomes" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
@@ -2223,7 +2223,7 @@
                     <p style="font-size: 3rem; font-weight: 800; color: var(--system-green); margin: 0; line-height: 1;">5件</p>
                 </div>
             </div>
-           
+            
             <!-- 主要イニシアティブ (Major Initiatives) -->
             <h3 class="summary-group-title" style="font-size: 1.5rem; font-weight: 700; color: var(--label-primary); margin: 2rem 0 1rem 0; text-align: center;">主要イニシアティブ</h3>
             <div class="summary-grid projects" style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
@@ -2265,12 +2265,12 @@
                     <div class="chart-container" style="height: 360px;"><canvas id="regionChart"></canvas></div>
                 </div>
             </div>
-           
+            
             <div class="glass-card">
                 <h3 class="section-title" style="text-align:center">人気ページ TOP5</h3>
                 <div id="previews"></div>
             </div>
-           
+            
             <!-- Search Console セクション -->
             <div class="analytics-header" style="margin-top: 4rem;">
                 <img src="https://digi-mado.jp/wp-content/uploads/2022/07/search-console-image.png" alt="Google Search Console" class="analytics-logo">
@@ -2310,14 +2310,14 @@
                     </tbody>
                 </table>
             </div>
-           
+            
            <!-- 유효문의 분석 섹션 - 애플 스타일 개선 -->
 <div class="glass-card" style="margin-top: 2rem;">
     <h3 class="section-title" style="font-size:1.25rem; text-align:center;">
         Inquiry Analysis<br>
         <small style="font-size: 0.9rem; color: var(--label-secondary);">有効なお問い合わせ 5件の詳細</small>
     </h3>
-   
+    
     <div class="inquiry-table-wrapper" style="margin-top:1.5rem; overflow-x: auto;">
         <table class="table" style="width: 100%; border-collapse: separate; border-spacing: 0;">
             <thead>
@@ -2454,829 +2454,35 @@
                 </div>
             </div>
         </div>
-       
-        <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events & PR - Restructured</title>
-    <style>
-        /* 기존 스타일 변수들 */
-        :root {
-            --system-blue: #007AFF;
-            --system-green: #34C759;
-            --system-purple: #AF52DE;
-            --system-red: #FF3B30;
-            --system-gray: #8E8E93;
-            --system-gray5: #E5E5EA;
-            --system-gray6: #F2F2F7;
-            --label-primary: #000000;
-            --label-secondary: #3C3C43;
-            --label-tertiary: #3C3C4399;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F2F2F7;
-            --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12);
-            --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.12);
-            --spring-1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* 이벤트 카드 전용 스타일 */
-        .event-details {
-            margin-bottom: 2rem;
-        }
-
-        .event-card {
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .event-card:hover {
-            box-shadow: var(--shadow-2);
-            transform: translateY(-2px);
-        }
-
-        .event-header {
-            padding: 1.5rem;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--system-gray5);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .event-header:hover {
-            background: #e8e8ed;
-        }
-
-        .event-badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: white;
-            margin-right: 1rem;
-        }
-
-        .badge-event {
-            background: linear-gradient(135deg, var(--system-blue), var(--system-purple));
-        }
-
-        .badge-seminar {
-            background: linear-gradient(135deg, var(--system-green), #30D158);
-        }
-
-        .event-title {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--label-primary);
-        }
-
-        .event-date {
-            color: var(--system-gray);
-            font-size: 0.9rem;
-        }
-
-        .event-body {
-            display: none;
-            padding: 2rem;
-            animation: slideDown 0.3s ease;
-        }
-
-        .event-card.expanded .event-body {
-            display: block;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .event-description {
-            color: #616161;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .info-section {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-section h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--label-primary);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .info-label {
-            color: var(--system-gray);
-            font-size: 0.85rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .info-value {
-            font-weight: 600;
-            color: var(--label-primary);
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .schedule-table thead {
-            background: var(--bg-secondary);
-        }
-
-        .schedule-table th {
-            padding: 0.75rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.85rem;
-            border-bottom: 2px solid var(--system-gray5);
-        }
-
-        .schedule-table td {
-            padding: 0.75rem;
-            border-bottom: 1px solid var(--system-gray6);
-            font-size: 0.9rem;
-        }
-
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .schedule-table tr:hover {
-            background: #fafafa;
-        }
-
-        .participant-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-box {
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 12px;
-            padding: 1rem;
-        }
-
-        .stat-box h5 {
-            font-size: 0.85rem;
-            color: var(--system-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-list {
-            font-size: 0.85rem;
-            line-height: 1.8;
-        }
-
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.2rem 0;
-        }
-
-        .expand-icon {
-            transition: transform 0.3s ease;
-            color: var(--system-gray);
-        }
-
-        .event-card.expanded .expand-icon {
-            transform: rotate(180deg);
-        }
-
-        /* 모바일 대응 */
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-           
-            .participant-stats {
-                grid-template-columns: 1fr;
-            }
-           
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-           
-            .schedule-table {
-                font-size: 0.8rem;
-            }
-           
-            .schedule-table th,
-            .schedule-table td {
-                padding: 0.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-   <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events & PR - Restructured</title>
-    <style>
-        /* 기존 스타일 변수들 */
-        :root {
-            --system-blue: #007AFF;
-            --system-green: #34C759;
-            --system-purple: #AF52DE;
-            --system-red: #FF3B30;
-            --system-gray: #8E8E93;
-            --system-gray5: #E5E5EA;
-            --system-gray6: #F2F2F7;
-            --label-primary: #000000;
-            --label-secondary: #3C3C43;
-            --label-tertiary: #3C3C4399;
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F2F2F7;
-            --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12);
-            --shadow-2: 0 2px 8px rgba(0, 0, 0, 0.12);
-            --spring-1: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        /* 이벤트 카드 전용 스타일 */
-        .event-details {
-            margin-bottom: 2rem;
-        }
-
-        .event-card {
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .event-card:hover {
-            box-shadow: var(--shadow-2);
-            transform: translateY(-2px);
-        }
-
-        .event-header {
-            padding: 1.5rem;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid var(--system-gray5);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .event-header:hover {
-            background: #e8e8ed;
-        }
-
-        .event-badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: white;
-            margin-right: 1rem;
-        }
-
-        .badge-event {
-            background: linear-gradient(135deg, var(--system-blue), var(--system-purple));
-        }
-
-        .badge-seminar {
-            background: linear-gradient(135deg, var(--system-green), #30D158);
-        }
-
-        .event-title {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--label-primary);
-        }
-
-        .event-date {
-            color: var(--system-gray);
-            font-size: 0.9rem;
-        }
-
-        .event-body {
-            display: none;
-            padding: 2rem;
-            animation: slideDown 0.3s ease;
-        }
-
-        .event-card.expanded .event-body {
-            display: block;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .event-description {
-            color: #616161;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .info-section {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-section h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--label-primary);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .info-label {
-            color: var(--system-gray);
-            font-size: 0.85rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .info-value {
-            font-weight: 600;
-            color: var(--label-primary);
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .schedule-table thead {
-            background: var(--bg-secondary);
-        }
-
-        .schedule-table th {
-            padding: 0.75rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.85rem;
-            border-bottom: 2px solid var(--system-gray5);
-        }
-
-        .schedule-table td {
-            padding: 0.75rem;
-            border-bottom: 1px solid var(--system-gray6);
-            font-size: 0.9rem;
-        }
-
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .schedule-table tr:hover {
-            background: #fafafa;
-        }
-
-        .participant-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-box {
-            background: white;
-            border: 1px solid var(--system-gray5);
-            border-radius: 12px;
-            padding: 1rem;
-        }
-
-        .stat-box h5 {
-            font-size: 0.85rem;
-            color: var(--system-gray);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-list {
-            font-size: 0.85rem;
-            line-height: 1.8;
-        }
-
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.2rem 0;
-        }
-
-        .expand-icon {
-            transition: transform 0.3s ease;
-            color: var(--system-gray);
-        }
-
-        .event-card.expanded .expand-icon {
-            transform: rotate(180deg);
-        }
-
-        /* 모바일 대응 */
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-           
-            .participant-stats {
-                grid-template-columns: 1fr;
-            }
-           
-            .event-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-           
-            .schedule-table {
-                font-size: 0.8rem;
-            }
-           
-            .schedule-table th,
-            .schedule-table td {
-                padding: 0.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="events-pr" class="tab-pane">
-        <div class="section-header">
-            <h2 class="section-title">Events & PR</h2>
-            <p class="section-description">セミナー・イベント等、対外広報活動</p>
-        </div>
-       
-        <div class="glass-card">
-            <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">開催予定イベント</h3>
-           
-            <!-- ISI日本語学校 企業見学 -->
-            <div class="event-card" id="isi-event">
-                <div class="event-header" onclick="toggleEvent('isi-event')">
-                    <div>
-                        <span class="event-badge badge-event">EVENT</span>
-                        <span class="event-title">ISI日本語学校 企業見学・研修</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <span class="event-date">2025年8月28日（木）</span>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                </div>
-               
-                <div class="event-body">
-                    <p class="event-description">
-                        未来のグローバル人材との関係構築を目的とした企業訪問イベントです。
-                    </p>
-                   
-                    <!-- 参加者情報 -->
-                    <div class="info-section">
-                        <h4>参加者構成（計23名）</h4>
-                        <div class="participant-stats">
-                            <div class="stat-box">
-                                <h5>参加者内訳</h5>
-                                <div class="stat-list">
-                                    <div class="stat-row">
-                                        <span>ISI日本語学校 学生</span>
-                                        <strong>20名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>引率教員</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>引率大学生</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>渋谷新聞 記者</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            <div class="stat-box">
-                                <h5>学生国籍構成</h5>
-                                <div class="stat-list">
-                                    <div class="stat-row">
-                                        <span>🇷🇺 ロシア・東欧系</span>
-                                        <strong>5名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇨🇳 中国系</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇪🇸 スペイン・中南米系</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇰🇷 韓国系</span>
-                                        <strong>3名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🌏 その他</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <!-- プログラムスケジュール -->
-                    <h4 style="font-size: 1rem; font-weight: 700; margin: 1.5rem 0 1rem;">プログラムスケジュール</h4>
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 110px;">時間</th>
-                                <th style="width: 60px; text-align: center;">所要</th>
-                                <th>内容</th>
-                                <th style="width: 80px; text-align: center;">担当</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>13:00-13:05</td>
-                                <td style="text-align: center; color: var(--system-gray);">5分</td>
-                                <td>上野本社 13階 受付集合・ご案内</td>
-                                <td style="text-align: center;">管理部</td>
-                            </tr>
-                            <tr>
-                                <td>13:05-13:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">20分</td>
-                                <td><strong>ビジネスイントロダクション</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">会社概要・インバウンド市場の現状</span>
-                                </td>
-                                <td style="text-align: center;">田邊</td>
-                            </tr>
-                            <tr>
-                                <td>13:25-13:55</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>JAPANKURU紹介</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">多言語情報発信の仕組み（やさしい日本語対応）</span>
-                                </td>
-                                <td style="text-align: center;">菅野</td>
-                            </tr>
-                            <tr>
-                                <td>13:55-14:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>korekoko紹介</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">在留外国人向けイベントプラットフォーム</span>
-                                </td>
-                                <td style="text-align: center;">田邊</td>
-                            </tr>
-                            <tr style="background: #fafafa;">
-                                <td>14:25-14:35</td>
-                                <td style="text-align: center; color: var(--system-gray);">10分</td>
-                                <td>休憩</td>
-                                <td style="text-align: center;">-</td>
-                            </tr>
-                            <tr>
-                                <td>14:35-15:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">50分</td>
-                                <td><strong>ワークショップ</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">訪日外国人集客企画案をグループで立案</span>
-                                </td>
-                                <td style="text-align: center;">田邊・菅野</td>
-                            </tr>
-                            <tr>
-                                <td>15:25-15:55</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>発表 & フィードバック</strong></td>
-                                <td style="text-align: center;">全員</td>
-                            </tr>
-                            <tr>
-                                <td>15:55-16:00</td>
-                                <td style="text-align: center; color: var(--system-gray);">5分</td>
-                                <td><strong>Q&A・クロージング</strong></td>
-                                <td style="text-align: center;">田邊</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        
+        <div id="events-pr" class="tab-pane">
+            <div class="section-header">
+                <h2 class="section-title">Events & PR</h2>
+                <p class="section-description">セミナー・イベント等、対外広報活動</p>
             </div>
-
-            <!-- 訪日韓国人市場セミナー -->
-            <div class="event-card" id="seminar-event">
-                <div class="event-header" onclick="toggleEvent('seminar-event')">
-                    <div>
-                        <span class="event-badge badge-seminar">SEMINAR</span>
-                        <span class="event-title">訪日韓国人市場セミナー</span>
-                        <span style="background: var(--system-blue); color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; margin-left: 1rem;">14社 17名参加</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <span class="event-date">2025年9月26日（金）</span>
-                        <span class="expand-icon">▼</span>
-                    </div>
-                </div>
-               
-                <div class="event-body">
-                    <p class="event-description">
-                        韓国市場の最新トレンドと効果的なアプローチ方法について解説します。
-                    </p>
-                   
-                    <!-- 開催概要 -->
-                    <div class="info-section">
-                        <h4>開催概要</h4>
-                        <div class="info-grid">
-                            <div class="info-item">
-                                <span class="info-label">開催日時</span>
-                                <span class="info-value">2025年9月26日（金）14:00-15:30</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">開催場所</span>
-                                <span class="info-value">グローバルデイリー本社 セミナールーム</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">テーマ</span>
-                                <span class="info-value">訪日韓国人市場の最新動向と攻略法</span>
-                            </div>
-                            <div class="info-item">
-                                <span class="info-label">定員</span>
-                                <span class="info-value">30名（会場収容人数）</span>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <!-- 参加企業サマリー -->
-                    <div class="participant-stats">
-                        <div class="stat-box">
-                            <h5>業種別参加者</h5>
-                            <div class="stat-list">
-                                <div class="stat-row">
-                                    <span>小売・流通</span>
-                                    <strong>8名</strong>
-                                </div>
-                                <div class="stat-row">
-                                    <span>製造業</span>
-                                    <strong>4名</strong>
-                                </div>
-                                <div class="stat-row">
-                                    <span>広告・マーケティング</span>
-                                    <strong>2名</strong>
-                                </div>
-                                <div class="stat-row">
-                                    <span>その他</span>
-                                    <strong>3名</strong>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="stat-box">
-                            <h5>主要参加企業</h5>
-                            <div style="font-size: 0.9rem; line-height: 1.8;">
-                                • オリエンタルランド<br>
-                                • 阪急阪神百貨店（3名）<br>
-                                • 亀田製菓（2名）<br>
-                                • イトーヨーカ堂<br>
-                                • パルコ<br>
-                                • エイベックス
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <!-- 参加者詳細リスト -->
-                    <details style="background: #F9F9F9; border-radius: 12px; padding: 1rem; margin-top: 1.5rem;">
-                        <summary style="cursor: pointer; font-weight: 600; color: var(--system-blue); padding: 0.5rem;">
-                            参加者詳細リストを表示 →
-                        </summary>
-                       
-                        <div style="overflow-x: auto; margin-top: 1rem;">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr>
-                                        <th>企業名</th>
-                                        <th>担当者</th>
-                                        <th>部署</th>
-                                        <th style="text-align: center;">申込日</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>オリエンタルランド</td><td>張 蕙宇</td><td>マーケットディベロップメント部</td><td style="text-align: center;">7/31</td></tr>
-                                    <tr><td>イトーヨーカ堂</td><td>伊藤 寿代</td><td>営業企画室</td><td style="text-align: center;">8/5</td></tr>
-                                    <tr><td>パルコ</td><td>田中 堅</td><td>渋谷パルコ</td><td style="text-align: center;">8/5</td></tr>
-                                    <tr style="background: #FAFAFA;"><td>阪急阪神百貨店</td><td>杉崎 ふさ</td><td>海外顧客マーケティング</td><td style="text-align: center;">8/6</td></tr>
-                                    <tr style="background: #FAFAFA;"><td>阪急阪神百貨店</td><td>太田 祐梨奈</td><td>海外顧客マーケティング部</td><td style="text-align: center;">8/6</td></tr>
-                                    <tr style="background: #FAFAFA;"><td>阪急阪神百貨店</td><td>富田 桃子</td><td>海外顧客マーケティング部</td><td style="text-align: center;">8/11</td></tr>
-                                    <tr><td>ヨックモック</td><td>飯塚 裕子</td><td>事業開発部</td><td style="text-align: center;">8/6</td></tr>
-                                    <tr><td>亀田製菓</td><td>下江 勲</td><td>-</td><td style="text-align: center;">8/8</td></tr>
-                                    <tr><td>亀田製菓</td><td>フロロワ アナスターシア</td><td>海外事業部</td><td style="text-align: center;">8/8</td></tr>
-                                    <tr><td>富士フイルムヘルスケアラボラトリー</td><td>熊澤 俊吾</td><td>海外インバウンドG</td><td style="text-align: center;">8/12</td></tr>
-                                    <tr><td>マッシュスタイルラボ</td><td>中澤 主税</td><td>営業本部</td><td style="text-align: center;">8/19</td></tr>
-                                    <tr><td>北海道コンフェクト</td><td>井上 泰一</td><td>-</td><td style="text-align: center;">8/19</td></tr>
-                                    <tr><td>ガーデンテラスホテルズ</td><td>杉本 慶</td><td>-</td><td style="text-align: center;">8/19</td></tr>
-                                    <tr><td>ジャンボツアーズ</td><td>李 明勳</td><td>インバウンド営業部</td><td style="text-align: center;">8/20</td></tr>
-                                    <tr><td>二木ゴルフ</td><td>松本 賢</td><td>経営企画室</td><td style="text-align: center;">8/20</td></tr>
-                                    <tr><td>エイベックス・アライアンス＆パートナーズ</td><td>中山 勝代</td><td>レーベル営業グループ</td><td style="text-align: center;">8/22</td></tr>
-                                    <tr><td>カイゲンファーマ</td><td>武部 直人</td><td>営業企画部</td><td style="text-align: center;">8/22</td></tr>
-                                </tbody>
-                            </table>
-                            <p style="font-size: 0.8rem; color: var(--system-gray); text-align: center; margin-top: 0.75rem; font-style: italic;">
-                                ※ 実参加者は17名（重複申込除く）
-                            </p>
-                        </div>
-                    </details>
-                </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">開催予定イベント</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <span class="activity-tag highlight">EVENT</span>
+                        <strong>ISI日本語学校 企業見学・研修</strong>
+                        <p style="margin: 1rem 0; color: var(--label-secondary);">未来のグローバル人材との関係構築を目的とした企業訪問イベントです。<br><b>開催日:</b> 2025年8月28日</p>
+                    </li>
+                    <li class="activity-item">
+                        <span class="activity-tag">SEMINAR</span>
+                        <strong>訪日韓国人市場向けオンラインセミナー</strong>
+                        <p style="margin: 1rem 0; color: var(--label-secondary);">韓国市場の最新トレンドと効果的なアプローチ方法について解説します。<br><b>開催予定:</b> 2025年9月</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">コンテンツ制作活動</h3>
+                <ul class="activity-list">
+                    <li class="activity-item"><span class="activity-tag">Blog</span>「2025年7月日本で大地震？」香港旅行への影響を分析</li>
+                    <li class="activity-item"><span class="activity-tag">Blog</span>タイ観光産業の「急落」から日本が学ぶべきこと</li>
+                </ul>
             </div>
         </div>
-       
-        <div class="glass-card">
-            <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">コンテンツ制作活動</h3>
-            <ul class="activity-list">
-                <li class="activity-item">
-                    <span class="activity-tag">Blog</span>
-                    「2025年7月日本で大地震？」香港旅行への影響を分析
-                </li>
-                <li class="activity-item">
-                    <span class="activity-tag">Blog</span>
-                    タイ観光産業の「急落」から日本が学ぶべきこと
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        function toggleEvent(eventId) {
-            const eventCard = document.getElementById(eventId);
-            if (eventCard) {
-                eventCard.classList.toggle('expanded');
-            }
-        }
-    </script>
-</body>
-</html>
-
-    <script>
-        function toggleEvent(eventId) {
-            const eventCard = document.getElementById(eventId);
-            if (eventCard) {
-                eventCard.classList.toggle('expanded');
-            }
-        }
-    </script>
-</body>
-</html>
 
         <div id="new-service" class="tab-pane">
             <div class="section-header">
@@ -3292,7 +2498,7 @@
                         制作費＋広告運用手数料で当社の収益は最大化、クライアントは初月から数字を回収──まさに Win-Win モデルです。
                     </p>
                 </div>
-               
+                
                 <div class="process-timeline">
                     <div class="process-step">
                         <div class="step-marker">Step 1<br>戦略設計</div>
@@ -3390,13 +2596,13 @@
                 </div>
             </div>
         </div>
-       
+        
         <div id="operations" class="tab-pane">
             <div class="section-header">
                 <h2 class="section-title">PR & Digital Operations</h2>
                 <p class="section-description">広報・ウェブ運営・営業支援の統合業務状況</p>
             </div>
-           
+            
             <!-- 업무 영역별 대시보드 -->
             <div class="operations-overview">
                 <div class="operations-stats">
@@ -3442,14 +2648,14 @@
                             <div class="project-progress-ring">
                                 <svg width="60" height="60" viewBox="0 0 60 60">
                                     <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-blue)" stroke-width="4"
-                                            stroke-dasharray="157" stroke-dashoffset="47" stroke-linecap="round"
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-blue)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="47" stroke-linecap="round" 
                                             transform="rotate(-90 30 30)" class="progress-circle"/>
                                 </svg>
                                 <div class="progress-text">70%</div>
                             </div>
                         </div>
-                       
+                        
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-client">Japan-Kuru</span>
@@ -3457,7 +2663,7 @@
                             </div>
                             <h3 class="project-title">クーポン特化ページ制作</h3>
                             <p class="project-description">訪日韓国人向けのクーポン配布・利用促進に特化したランディングページ</p>
-                           
+                            
                             <div class="project-preview-container" onclick="showProjectPreview('coupon')">
                                 <div class="preview-placeholder">
                                     <div class="preview-icon">🎟️</div>
@@ -3467,7 +2673,7 @@
                                     <div class="preview-button">🔍 Live Demo</div>
                                 </div>
                             </div>
-                           
+                            
                             <div class="project-metrics">
                                 <div class="metric-item">
                                     <span class="metric-value">2025.8</span>
@@ -3488,14 +2694,14 @@
                             <div class="project-progress-ring">
                                 <svg width="60" height="60" viewBox="0 0 60 60">
                                     <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-purple)" stroke-width="4"
-                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round"
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-purple)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round" 
                                             transform="rotate(-90 30 30)" class="progress-circle"/>
                                 </svg>
                                 <div class="progress-text">60%</div>
                             </div>
                         </div>
-                       
+                        
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-client">台湾市場</span>
@@ -3503,7 +2709,7 @@
                             </div>
                             <h3 class="project-title">テイ先生 x Japan-Kuru コラボ企画</h3>
                             <p class="project-description">台湾人気インフルエンサーとのコラボレーション特設ページ制作</p>
-                           
+                            
                             <div class="project-preview-container" onclick="showProjectPreview('taiwan')">
                                 <div class="preview-placeholder">
                                     <div class="preview-icon">🇹🇼</div>
@@ -3513,7 +2719,7 @@
                                     <div class="preview-button">🔍 Live Demo</div>
                                 </div>
                             </div>
-                           
+                            
                             <div class="project-metrics">
                                 <div class="metric-item">
                                     <span class="metric-value">2025.8</span>
@@ -3534,14 +2740,14 @@
                             <div class="project-progress-ring">
                                 <svg width="60" height="60" viewBox="0 0 60 60">
                                     <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-red)" stroke-width="4"
-                                            stroke-dasharray="157" stroke-dashoffset="78.5" stroke-linecap="round"
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-red)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="78.5" stroke-linecap="round" 
                                             transform="rotate(-90 30 30)" class="progress-circle"/>
                                 </svg>
                                 <div class="progress-text">50%</div>
                             </div>
                         </div>
-                       
+                        
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-client">Global Daily</span>
@@ -3549,7 +2755,7 @@
                             </div>
                             <h3 class="project-title">メディア用ページをサイト内に新設</h3>
                             <p class="project-description">報道関係者がいつでも自由にデータをダウンロード・引用できるように</p>
-                           
+                            
                             <div class="project-preview-container" onclick="showProjectPreview('media')">
                                 <div class="preview-placeholder">
                                     <div class="preview-icon">📰</div>
@@ -3559,7 +2765,7 @@
                                     <div class="preview-button">🔍 Page Preview</div>
                                 </div>
                             </div>
-                           
+                            
                             <div class="project-metrics">
                                 <div class="metric-item">
                                     <span class="metric-value">2025.9</span>
@@ -3580,14 +2786,14 @@
                             <div class="project-progress-ring">
                                 <svg width="60" height="60" viewBox="0 0 60 60">
                                     <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4"
-                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round"
+                                    <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4" 
+                                            stroke-dasharray="157" stroke-dashoffset="63" stroke-linecap="round" 
                                             transform="rotate(-90 30 30)" class="progress-circle"/>
                                 </svg>
                                 <div class="progress-text">60%</div>
                             </div>
                         </div>
-                       
+                        
                         <div class="project-content">
                             <div class="project-meta">
                                 <span class="project-client">Global Daily</span>
@@ -3595,7 +2801,7 @@
                             </div>
                             <h3 class="project-title">訪日韓国人市場向けセミナーページ</h3>
                             <p class="project-description">韓国市場の最新トレンドと効果的なアプローチ方法を解説するセミナー特設ページ</p>
-                           
+                            
                             <div class="project-preview-container" onclick="showProjectPreview('seminar')">
                                 <div class="preview-placeholder">
                                     <div class="preview-icon">🇰🇷</div>
@@ -3605,7 +2811,7 @@
                                     <div class="preview-button">🔍 Page Preview</div>
                                 </div>
                             </div>
-                           
+                            
                             <div class="project-metrics">
                                 <div class="metric-item">
                                     <span class="metric-value">2025.8</span>
@@ -3639,13 +2845,13 @@
                                 <span>85%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card maintenance">
                             <div class="task-status">継続中</div>
                             <h4>PV・CV向上施策の継続実行</h4>
                             <p>ブログ記事・SNS投稿・SEO最適化</p>
                         </div>
-                       
+                        
                         <div class="task-card in-progress">
                             <div class="task-status">準備中</div>
                             <h4>ISI日本語学校 企業見学</h4>
@@ -3655,7 +2861,7 @@
                                 <span>75%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card in-progress">
                             <div class="task-status">準備中</div>
                             <h4>訪日韓国人向けセミナー</h4>
@@ -3665,7 +2871,7 @@
                                 <span>40%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card maintenance">
                             <div class="task-status">継続中</div>
                             <h4>メディア対応・掲載管理</h4>
@@ -3686,13 +2892,13 @@
                             <h4>GA4内部構築・再設定</h4>
                             <p>分析体制の高度化・自動化</p>
                         </div>
-                       
+                        
                         <div class="task-card maintenance">
                             <div class="task-status">継続中</div>
                             <h4>サイト全体保守・更新</h4>
                             <p>コンテンツ更新・機能改善</p>
                         </div>
-                       
+                        
                         <div class="task-card maintenance">
                             <div class="task-status">継続中</div>
                             <h4>SEO最適化・分析</h4>
@@ -3717,7 +2923,7 @@
                                 <span>70%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card in-progress">
                             <div class="task-status">制作中</div>
                             <h4>テイ先生コラボページ</h4>
@@ -3727,7 +2933,7 @@
                                 <span>60%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card in-progress">
                             <div class="task-status">制作中</div>
                             <h4>メディア向けダウンロードページ</h4>
@@ -3737,7 +2943,7 @@
                                 <span>50%</span>
                             </div>
                         </div>
-                       
+                        
                         <div class="task-card in-progress">
                             <div class="task-status">制作中</div>
                             <h4>韓国市場セミナーページ</h4>
@@ -3762,7 +2968,7 @@
                             <h4>企業向けLP制作案件 (2件)</h4>
                             <p>営業部と協業・クライアント提案中 (受注待ち)</p>
                         </div>
-                       
+                        
                         <div class="task-card future">
                             <div class="task-status">展開準備</div>
                             <h4>LP制作パッケージ営業展開</h4>
@@ -3783,7 +2989,7 @@
                             <h4>会社紹介資料リニューアル</h4>
                             <p>関連動画や会社紹介書等すべて更新</p>
                         </div>
-                       
+                        
                         <div class="task-card future">
                             <div class="task-status">技術改善</div>
                             <h4>サイト速度最適化</h4>
@@ -3944,7 +3150,7 @@
     });
      
 
-       
+        
 
             // Chart rendering functions with Apple Health style
             function renderAnalyticsCharts() {
@@ -3956,19 +3162,19 @@
                         charts.pvCvChart = new Chart(ctxPvCv, {
                             type: 'bar',
                             data: {
-                                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+                                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月'],
                                 datasets: [
                                     {
                                         type: 'bar',
                                         label: 'ページビュー',
-                                        data: [15500, 16080, 19113, 14314, 11054, 10609, 13137],
+                                        data: [15500, 16080, 19113, 14314, 11054, 10609, 13137, 13340],
                                         backgroundColor: 'rgba(0, 122, 255, 0.6)', // system-blue
                                         yAxisID: 'y_pv',
                                     },
                                     {
                                         type: 'line',
                                         label: '有効な問い合わせ',
-                                        data: [3, 4, 6, 4, 3, 2, 5],
+                                        data: [3, 4, 6, 4, 3, 2, 5, 2],
                                         borderColor: '#FF3B30', // system-red
                                         backgroundColor: '#FF3B30',
                                         tension: 0.3,
@@ -4152,7 +3358,7 @@
                                 }
                             }
                         });
-                   
+                    
                     }
                 }
             }
@@ -4163,13 +3369,13 @@
                 const viewer = document.getElementById('demo-viewer');
                 const iframe = document.getElementById('demo-iframe');
                 const title = document.getElementById('demo-title');
-               
+                
                 const demoUrls = {
                     'demoA': 'https://yourjuli76.github.io/LP/marunouchi.index.html',
-                    'demoB': 'https://yourjuli76.github.io/LP/aichi_B_2.html',
+                    'demoB': 'https://yourjuli76.github.io/LP/aichi_B_2.html', 
                     'demoC': 'https://yourjuli76.github.io/LP/lawer_briefing_index.html#sec1'
                 };
-               
+                
                 const demoTitles = {
                     'demoA': 'デモサイト A - AREA特化LP',
                     'demoB': 'デモサイト B - 弁護士事務所特化LP',
@@ -4180,14 +3386,14 @@
                 document.querySelectorAll('.demo-controls .btn').forEach(btn => {
                     btn.className = btn.className.includes('btn-primary') ? 'btn btn-secondary' : 'btn btn-secondary';
                 });
-               
+                
                 // Highlight active button
                 document.getElementById(`btn-${demoType}`).className = 'btn btn-primary';
-               
+                
                 // Update content
                 title.textContent = demoTitles[demoType];
                 iframe.src = demoUrls[demoType];
-               
+                
                 // Show viewer with animation
                 viewer.style.display = 'block';
                 setTimeout(() => {
@@ -4198,13 +3404,13 @@
             window.closeDemo = function() {
                 const viewer = document.getElementById('demo-viewer');
                 const iframe = document.getElementById('demo-iframe');
-               
+                
                 viewer.classList.remove('show');
                 setTimeout(() => {
                     viewer.style.display = 'none';
                     iframe.src = '';
                 }, 400);
-               
+                
                 // Reset all buttons to secondary
                 document.querySelectorAll('.demo-controls .btn').forEach(btn => {
                     btn.className = 'btn btn-secondary';
@@ -4216,30 +3422,30 @@
         document.addEventListener('DOMContentLoaded', initializeApp);
 
         const articles = [
-            {
-                url: 'https://www.gldaily.com/',
-                pv: 4061,
-                tag: 'CVR改善'
+            { 
+                url: 'https://www.gldaily.com/', 
+                pv: 4061, 
+                tag: 'CVR改善' 
             },
-            {
-                url: 'https://www.gldaily.com/news/columns/columns44130/',
-                pv: 754,
-                tag: '関連記事'
+            { 
+                url: 'https://www.gldaily.com/news/columns/columns44130/', 
+                pv: 754, 
+                tag: '関連記事' 
             },
-            {
-                url: 'https://www.gldaily.com/news/columns/columns41072/',
-                pv: 390,
-                tag: '内部リンク'
+            { 
+                url: 'https://www.gldaily.com/news/columns/columns41072/', 
+                pv: 390, 
+                tag: '内部リンク' 
             },
-            {
-                url: 'https://www.gldaily.com/aboutus/company/',
-                pv: 345,
-                tag: 'CTA追加'
+            { 
+                url: 'https://www.gldaily.com/aboutus/company/', 
+                pv: 345, 
+                tag: 'CTA追加' 
             },
-            {
-                url: 'https://www.gldaily.com/services/seminars/',
-                pv: 390,
-                tag: 'フォーム改善'
+            { 
+                url: 'https://www.gldaily.com/services/seminars/', 
+                pv: 390, 
+                tag: 'フォーム改善' 
             },
         ];
 
@@ -4247,7 +3453,7 @@
             const proxy = 'https://api.allorigins.win/raw?url=';
             const res   = await fetch(proxy + encodeURIComponent(url));
             if (!res.ok) throw new Error('メタデータ불러오기 실패');
-           
+            
             const html = await res.text();
             const doc  = new DOMParser().parseFromString(html, 'text/html');
 
@@ -4291,7 +3497,7 @@
             const iframe = document.getElementById('project-preview-iframe');
             const title = document.getElementById('preview-modal-title');
             const infoPanel = document.getElementById('preview-project-info');
-           
+            
             const projectData = {
                 'coupon': {
                     title: 'JAPANKURU クーポンページ',
@@ -4300,7 +3506,7 @@
                         <div class="preview-project-details">
                             <h4>プロジェクト概要</h4>
                             <p>訪日韓国人をターゲットにしたクーポン配布・利用促進に特化したランディングページです。</p>
-                           
+                            
                             <h4>主要機能</h4>
                             <ul>
                                 <li>多様なクーポン表示システム</li>
@@ -4308,7 +3514,7 @@
                                 <li>SNSシェア機能</li>
                                 <li>利用統計ダッシュボード</li>
                             </ul>
-                           
+                            
                             <h4>期待効果</h4>
                             <div class="effect-metrics">
                                 <div class="effect-item">
@@ -4320,7 +3526,7 @@
                                     <span class="effect-label">新規ユーザー獲得</span>
                                 </div>
                             </div>
-                           
+                            
                             <h4>技術スタック</h4>
                             <div class="tech-stack">
                                 <span class="tech-item">React</span>
@@ -4338,7 +3544,7 @@
                         <div class="preview-project-details">
                             <h4>プロジェクト概要</h4>
                             <p>台湾の人気インフルエンサー「テイ先生」とのコラボレーション企画専用ランディングページです。</p>
-                           
+                            
                             <h4>コンテンツ内容</h4>
                             <ul>
                                 <li>テイ先生おすすめスポット紹介</li>
@@ -4346,7 +3552,7 @@
                                 <li>ファン向け特別企画</li>
                                 <li>コラボ動画・写真ギャラリー</li>
                             </ul>
-                           
+                            
                             <h4>マーケティング効果</h4>
                             <div class="effect-metrics">
                                 <div class="effect-item">
@@ -4358,7 +3564,7 @@
                                     <span class="effect-label">台湾市場認知度向上</span>
                                 </div>
                             </div>
-                           
+                            
                             <h4>多言語対応</h4>
                             <div class="tech-stack">
                                 <span class="tech-item">繁體中文</span>
@@ -4375,7 +3581,7 @@
                         <div class="preview-project-details">
                             <h4>プロジェクト概要</h4>
                             <p>報道関係者が自由にデータや画像をダウンロード・引用できる専用ページです。</p>
-                           
+                            
                             <h4>提供コンテンツ</h4>
                             <ul>
                                 <li>会社概要・ロゴデータ</li>
@@ -4384,7 +3590,7 @@
                                 <li>プレスリリース履歴</li>
                                 <li>代表者プロフィール・写真</li>
                             </ul>
-                           
+                            
                             <h4>期待効果</h4>
                             <div class="effect-metrics">
                                 <div class="effect-item">
@@ -4396,7 +3602,7 @@
                                     <span class="effect-label">資料提供時間短縮</span>
                                 </div>
                             </div>
-                           
+                            
                             <h4>機能</h4>
                             <div class="tech-stack">
                                 <span class="tech-item">ワンクリックDL</span>
@@ -4413,7 +3619,7 @@
                         <div class="preview-project-details">
                             <h4>プロジェクト概要</h4>
                             <p>訪日韓国人市場の最新トレンドと効果的なアプローチ方法を解説するオンラインセミナー専用ページです。</p>
-                           
+                            
                             <h4>セミナー内容</h4>
                             <ul>
                                 <li>2025年韓国人旅行トレンド分析</li>
@@ -4421,7 +3627,7 @@
                                 <li>成功事例とケーススタディ</li>
                                 <li>質疑応答・個別相談</li>
                             </ul>
-                           
+                            
                             <h4>想定参加者</h4>
                             <div class="effect-metrics">
                                 <div class="effect-item">
@@ -4433,7 +3639,7 @@
                                     <span class="effect-label">企業参加予定</span>
                                 </div>
                             </div>
-                           
+                            
                             <h4>機能</h4>
                             <div class="tech-stack">
                                 <span class="tech-item">事前申込</span>
@@ -4445,15 +3651,15 @@
                     `
                 }
             };
-           
+            
             const project = projectData[projectType];
             if (!project) return;
-           
+            
             // Update modal content
             title.textContent = project.title;
             iframe.src = project.url;
             infoPanel.innerHTML = project.info;
-           
+            
             // Show modal
             modal.style.display = 'block';
             setTimeout(() => {
@@ -4464,7 +3670,7 @@
         window.closeProjectPreview = function() {
             const modal = document.getElementById('project-preview-modal');
             const iframe = document.getElementById('project-preview-iframe');
-           
+            
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = 'none';
