@@ -2176,6 +2176,201 @@
     --label-secondary: rgba(0, 0, 0, 0.6);
     --label-tertiary: rgba(0, 0, 0, 0.4);
 }
+/* Events & PR Section Additional CSS */
+.event-card {
+    background: white;
+    border: 1px solid var(--system-gray5);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    box-shadow: var(--shadow-2);
+    transform: translateY(-2px);
+}
+
+.event-header {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--system-gray5);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-header:hover {
+    background: #e8e8ed;
+}
+
+.event-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    margin-right: 1rem;
+}
+
+.badge-event {
+    background: linear-gradient(135deg, var(--system-blue), var(--system-purple));
+}
+
+.badge-seminar {
+    background: linear-gradient(135deg, var(--system-green), #30D158);
+}
+
+.event-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--label-primary);
+}
+
+.event-date {
+    color: var(--system-gray);
+    font-size: 0.9rem;
+}
+
+.event-body {
+    display: none;
+    padding: 2rem;
+    animation: slideDown 0.3s ease;
+}
+
+.event-card.expanded .event-body {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-description {
+    color: #616161;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.info-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--label-primary);
+}
+
+.participant-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-box {
+    background: white;
+    border: 1px solid var(--system-gray5);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.stat-box h5 {
+    font-size: 0.85rem;
+    color: var(--system-gray);
+    margin-bottom: 0.5rem;
+}
+
+.stat-list {
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+}
+
+.expand-icon {
+    transition: transform 0.3s ease;
+    color: var(--system-gray);
+}
+
+.event-card.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid var(--system-gray5);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    background: var(--bg-secondary);
+}
+
+.schedule-table th {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 2px solid var(--system-gray5);
+}
+
+.schedule-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--system-gray6);
+    font-size: 0.9rem;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr:hover {
+    background: #fafafa;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: var(--system-gray);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.info-value {
+    font-weight: 600;
+    color: var(--label-primary);
+}
 </style>
 
 </head>
