@@ -3173,652 +3173,323 @@
         <img src="https://www.gldaily.com/gld-kanri/wp-content/themes/gldaily/assets/images/logo.png" alt="Global Daily" class="footer-logo">
         <p class="footer-text">&copy; 2025 グローバルデイリー株式会社 広報・コミュニケーション部</p>
     </footer>
+<script>
+    // 전역 변수
+    const charts = {};
+    
+    function initializeApp() {
+        if (typeof Chart === 'undefined') {
+            console.log('Chart.js is loading...');
+            setTimeout(initializeApp, 100);
+            return;
+        }
 
-    <script>
-      function initializeApp() {
+        // Chart.js 기본 설정
+        Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, system-ui, sans-serif';
+        Chart.defaults.font.size = 13;
+        Chart.defaults.color = '#3C3C43';
 
-    const tabLinks = document.querySelectorAll('.nav-item');
-    const tabPanes = document.querySelectorAll('.tab-pane');
+        // 탭 네비게이션
+        const tabLinks = document.querySelectorAll('.nav-item');
+        const tabPanes = document.querySelectorAll('.tab-pane');
 
-    // 탭 클릭 리스너: 딱 한 번만 등록
-    tabLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        // 모든 탭·패널 비활성화
-        tabLinks.forEach(l => l.classList.remove('active'));
-        tabPanes.forEach(p => p.classList.remove('active'));
-        // 클릭된 탭·패널만 활성화
-        this.classList.add('active');
-        target && target.classList.add('active');
-        // 탭 전환 후 analytics 탭이라면 차트 렌더링
-       if (target && target.id === 'analytics') {
-         renderAnalyticsCharts();
-         renderSearchCharts();
-         }
-      });
-    });
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                
+                if (target) {
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    target.classList.add('active');
+                    
+                    if (targetId === 'analytics') {
+                        setTimeout(() => {
+                            renderAnalyticsCharts();
+                            renderPreviews();
+                        }, 100);
+                    }
+                }
+            });
+        });
 
-    const charts = {}; // Chart 인스턴스 저장용
-    if (typeof Chart === 'undefined') {
-      console.log('Chart.js is loading...');
-      setTimeout(initializeApp, 100);
-      return;
+        // 스크롤 효과
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav-section');
+            if (nav) {
+                nav.classList.toggle('scrolled', window.scrollY > 20);
+            }
+        });
     }
 
-    // Chart.js Apple-style 기본 설정
-    Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, SF Pro Display, Inter, system-ui, sans-serif';
-    Chart.defaults.font.size = 13;
-    Chart.defaults.color = '#3C3C43';
-
-    const commonChartOptions = {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: {
-            padding: 20,
-            usePointStyle: true,
-            pointStyle: 'circle',
-            font: { size: 12, weight: '600' }
-          }
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          grid: { color: '#F2F2F7', drawBorder: false },
-          border: { display: false },
-          ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
-        },
-        x: {
-          grid: { display: false },
-          border: { display: false },
-          ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
-        }
-      },
-      interaction: { intersect: false, mode: 'index' }
-    };
-
-    // 네비게이션 스크롤 효과
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.nav-section');
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    });
-     
-
-        
-
-            // Chart rendering functions with Apple Health style
-            function renderAnalyticsCharts() {
-                // PV & CV 차트
-                if (!charts.pvCvChart) {
-                    const pvCvCanvas = document.getElementById('pvCvChart');
-                    if (pvCvCanvas) {
-                        const ctxPvCv = pvCvCanvas.getContext('2d');
-                        charts.pvCvChart = new Chart(ctxPvCv, {
-                            type: 'bar',
-                            data: {
-                                labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月'],
-                                datasets: [
-                                    {
-                                        type: 'bar',
-                                        label: 'ページビュー',
-                                        data: [15500, 16080, 19113, 14314, 11054, 10609, 13137, 13340],
-                                        backgroundColor: 'rgba(0, 122, 255, 0.6)', // system-blue
-                                        yAxisID: 'y_pv',
-                                    },
-                                    {
-                                        type: 'line',
-                                        label: '有効な問い合わせ',
-                                        data: [3, 4, 6, 4, 3, 2, 5, 1],
-                                        borderColor: '#FF3B30', // system-red
-                                        backgroundColor: '#FF3B30',
-                                        tension: 0.3,
-                                        yAxisID: 'y_cv',
-                                    }
-                                ]
-                            },
-                            options: {
-                                ...commonChartOptions,
-                                scales: {
-                                    x: {
-                                        ...commonChartOptions.scales.x
-                                    },
-                                    y_pv: {
-                                        type: 'linear',
-                                        display: true,
-                                        position: 'left',
-                                        title: { display: true, text: 'ページビュー' },
-                                        grid: { color: '#F2F2F7' },
-                                        ticks: { color: '#8E8E93' }
-                                    },
-                                    y_cv: {
-                                        type: 'linear',
-                                        display: true,
-                                        position: 'right',
-                                        title: { display: true, text: '有効な問い合わせ (件)' },
-                                        grid: { drawOnChartArea: false },
-                                        ticks: { stepSize: 1, color: '#8E8E93' }
-                                    }
-                                }
-                            }
-                        });
+    // 차트 렌더링
+    function renderAnalyticsCharts() {
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        font: { size: 12, weight: '600' }
                     }
                 }
-
-                if (!charts.channelChart) {
-                    const channelCanvas = document.getElementById('channelChart');
-                    if (channelCanvas) {
-                        const ctxChannel = channelCanvas.getContext('2d');
-                        charts.channelChart = new Chart(ctxChannel, {
-                            type: 'bar',
-                            data: {
-                                labels: ['Organic', 'Direct', 'Paid', 'Referral', 'Unassigned', 'Social'],
-                                datasets: [{
-                                    label: 'Sessions',
-                                    data: [5033, 1552, 750, 158, 107, 64],
-                                    backgroundColor: [
-                                        '#007AFF',
-                                        '#AF52DE',
-                                        '#34C759',
-                                        '#FF9500',
-                                        '#FF3B30',
-                                        '#8E8E93'
-                                    ],
-                                    borderRadius: 8,
-                                    borderWidth: 0
-                                }]
-                            },
-                            options: {
-                                ...commonChartOptions,
-                                plugins: {
-                                    legend: { display: false }
-                                }
-                            }
-                        });
-                    }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: '#F2F2F7', drawBorder: false },
+                    border: { display: false },
+                    ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
+                },
+                x: {
+                    grid: { display: false },
+                    border: { display: false },
+                    ticks: { color: '#8E8E93', font: { size: 12, weight: '500' } }
                 }
+            },
+            interaction: { intersect: false, mode: 'index' }
+        };
 
-                if (!charts.regionChart) {
-                    const regionCanvas = document.getElementById('regionChart');
-                    if (regionCanvas) {
-                        const ctxRegion = regionCanvas.getContext('2d');
-                        charts.regionChart = new Chart(ctxRegion, {
-                            type: 'doughnut',
-                            data: {
-                                labels: [
-                                    '新宿区','港区','千代田区','渋谷区',
-                                    '大阪市','名古屋市','横浜市',
-                                    'その他'
-                                ],
-                                datasets: [{
-                                    data: [
-                                        964, 913, 616, 588,
-                                        1024, 546, 487,
-                                        3380
-                                    ],
-                                    backgroundColor: [
-                                        '#007AFF', '#AF52DE', '#34C759', '#FF9500',
-                                        '#FFCC00', '#30B0FF', '#5856D6', '#8E8E93'
-                                    ],
-                                    borderWidth: 0,
-                                    cutout: '70%'
-                                }]
+        // PV & CV 차트
+        if (!charts.pvCvChart) {
+            const pvCvCanvas = document.getElementById('pvCvChart');
+            if (pvCvCanvas) {
+                const ctxPvCv = pvCvCanvas.getContext('2d');
+                charts.pvCvChart = new Chart(ctxPvCv, {
+                    type: 'bar',
+                    data: {
+                        labels: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月'],
+                        datasets: [
+                            {
+                                type: 'bar',
+                                label: 'ページビュー',
+                                data: [15500, 16080, 19113, 14314, 11054, 10609, 13137, 13340],
+                                backgroundColor: 'rgba(0, 122, 255, 0.6)',
+                                yAxisID: 'y_pv',
                             },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
-                                        position: 'bottom',
-                                        labels: {
-                                            padding: 20,
-                                            usePointStyle: true,
-                                            pointStyle: 'circle',
-                                            font: { size: 12, weight: '600' }
-                                        }
-                                    }
-                                }
+                            {
+                                type: 'line',
+                                label: '有効な問い合わせ',
+                                data: [3, 4, 6, 4, 3, 2, 5, 1],
+                                borderColor: '#FF3B30',
+                                backgroundColor: '#FF3B30',
+                                tension: 0.3,
+                                yAxisID: 'y_cv',
                             }
-                        });
-                    }
-                }
-            }
-
-            function renderSearchCharts() {
-                if (!charts.deviceChart) {
-                    const deviceCanvas = document.getElementById('deviceChart');
-                    if (deviceCanvas) {
-                        const ctxDevice = deviceCanvas.getContext('2d');
-                        charts.deviceChart = new Chart(ctxDevice, {
-                            type: 'doughnut',
-                            data: {
-                                labels: ['Mobile', 'Desktop', 'Tablet'],
-                                datasets: [{
-                                    data: [65.4, 29.8, 4.8],
-                                    backgroundColor: ['#007AFF', '#AF52DE', '#34C759'],
-                                    borderWidth: 0,
-                                    cutout: '70%'
-                                }]
+                        ]
+                    },
+                    options: {
+                        ...commonOptions,
+                        scales: {
+                            x: commonOptions.scales.x,
+                            y_pv: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: { display: true, text: 'ページビュー' },
+                                grid: { color: '#F2F2F7' },
+                                ticks: { color: '#8E8E93' }
                             },
-                            options: {
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
-                                        position: 'bottom',
-                                        labels: {
-                                            padding: 20,
-                                            usePointStyle: true,
-                                            pointStyle: 'circle',
-                                            font: { size: 12, weight: '600' }
-                                        }
-                                    }
-                                }
+                            y_cv: {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: { display: true, text: '有効な問い合わせ (件)' },
+                                grid: { drawOnChartArea: false },
+                                ticks: { stepSize: 1, color: '#8E8E93' }
                             }
-                        });
-                    }
-                }
-                if (!charts.dailyChart) {
-                    const dailyCanvas = document.getElementById('dailyChart');
-                    if (dailyCanvas) {
-                        const ctxDaily = dailyCanvas.getContext('2d');
-                        const dailyData = [], dailyLabels = [];
-                        for (let i = 0; i < 91; i++) {
-                            dailyData.push(Math.max(1, Math.round(9 + Math.sin(i / 7) * 3 + Math.random() * 2)));
-                            dailyLabels.push(i % 14 === 0 ? `${new Date(2025, 3, 26 + i).getMonth() + 1}/${new Date(2025, 3, 26 + i).getDate()}` : '');
                         }
-                        charts.dailyChart = new Chart(ctxDaily, {
-                            type: 'line',
-                            data: {
-                                labels: dailyLabels,
-                                datasets: [{
-                                    label: 'Clicks',
-                                    data: dailyData,
-                                    borderColor: '#007AFF',
-                                    backgroundColor: 'rgba(0, 122, 255, 0.1)',
-                                    tension: 0.4,
-                                    fill: true,
-                                    borderWidth: 3,
-                                    pointRadius: 0,
-                                    pointHoverRadius: 6,
-                                    pointBackgroundColor: '#007AFF',
-                                    pointBorderColor: '#ffffff',
-                                    pointBorderWidth: 2
-                                }]
-                            },
-                            options: {
-                                ...commonChartOptions,
-                                plugins: {
-                                    legend: { display: false }
-                                }
-                            }
-                        });
-                    
                     }
-                }
+                });
             }
-
-
-            // Demo site functions
-            window.showDemo = function(demoType) {
-                const viewer = document.getElementById('demo-viewer');
-                const iframe = document.getElementById('demo-iframe');
-                const title = document.getElementById('demo-title');
-                
-                const demoUrls = {
-                    'demoA': 'https://yourjuli76.github.io/LP/marunouchi.index.html',
-                    'demoB': 'https://yourjuli76.github.io/LP/aichi_B_2.html', 
-                    'demoC': 'https://yourjuli76.github.io/LP/lawer_briefing_index.html#sec1'
-                };
-                
-                const demoTitles = {
-                    'demoA': 'デモサイト A - AREA特化LP',
-                    'demoB': 'デモサイト B - 弁護士事務所特化LP',
-                    'demoC': '標準提案書 - LP制作・PRパッケージ企画サマリ'
-                };
-
-                // Reset button styles
-                document.querySelectorAll('.demo-controls .btn').forEach(btn => {
-                    btn.className = btn.className.includes('btn-primary') ? 'btn btn-secondary' : 'btn btn-secondary';
-                });
-                
-                // Highlight active button
-                document.getElementById(`btn-${demoType}`).className = 'btn btn-primary';
-                
-                // Update content
-                title.textContent = demoTitles[demoType];
-                iframe.src = demoUrls[demoType];
-                
-                // Show viewer with animation
-                viewer.style.display = 'block';
-                setTimeout(() => {
-                    viewer.classList.add('show');
-                }, 10);
-            };
-
-            window.closeDemo = function() {
-                const viewer = document.getElementById('demo-viewer');
-                const iframe = document.getElementById('demo-iframe');
-                
-                viewer.classList.remove('show');
-                setTimeout(() => {
-                    viewer.style.display = 'none';
-                    iframe.src = '';
-                }, 400);
-                
-                // Reset all buttons to secondary
-                document.querySelectorAll('.demo-controls .btn').forEach(btn => {
-                    btn.className = 'btn btn-secondary';
-                });
-            };
         }
 
-        // DOM 로딩 완료 후 실행
-        document.addEventListener('DOMContentLoaded', initializeApp);
+        // Channel Chart
+        if (!charts.channelChart) {
+            const channelCanvas = document.getElementById('channelChart');
+            if (channelCanvas) {
+                const ctxChannel = channelCanvas.getContext('2d');
+                charts.channelChart = new Chart(ctxChannel, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Organic', 'Direct', 'Paid', 'Referral', 'Unassigned', 'Social'],
+                        datasets: [{
+                            label: 'Sessions',
+                            data: [5033, 1552, 750, 158, 107, 64],
+                            backgroundColor: ['#007AFF', '#AF52DE', '#34C759', '#FF9500', '#FF3B30', '#8E8E93'],
+                            borderRadius: 8,
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        plugins: { legend: { display: false } }
+                    }
+                });
+            }
+        }
 
+        // Region Chart
+        if (!charts.regionChart) {
+            const regionCanvas = document.getElementById('regionChart');
+            if (regionCanvas) {
+                const ctxRegion = regionCanvas.getContext('2d');
+                charts.regionChart = new Chart(ctxRegion, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['新宿区','港区','千代田区','渋谷区','大阪市','名古屋市','横浜市','その他'],
+                        datasets: [{
+                            data: [964, 913, 616, 588, 1024, 546, 487, 3380],
+                            backgroundColor: ['#007AFF', '#AF52DE', '#34C759', '#FF9500', '#FFCC00', '#30B0FF', '#5856D6', '#8E8E93'],
+                            borderWidth: 0,
+                            cutout: '70%'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle',
+                                    font: { size: 12, weight: '600' }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    // 프리뷰 렌더링
+    async function renderPreviews() {
         const articles = [
-            { 
-                url: 'https://www.gldaily.com/', 
-                pv: 4714, 
-                tag: 'トップページ' 
-            },
-            { 
-                url: 'https://www.gldaily.com/contact/', 
-                pv: 605, 
-                tag: 'お問い合わせ' 
-            },
-            { 
-                url: 'https://www.gldaily.com/news/columns/columns41072/', 
-                pv: 412, 
-                tag: 'コラム記事' 
-            },
-            { 
-                url: 'https://www.gldaily.com/services/japankuru/', 
-                pv: 410, 
-                tag: 'サービス紹介' 
-            },
-            { 
-                url: 'https://www.gldaily.com/news/columns/columns44130/', 
-                pv: 392, 
-                tag: 'コラム記事' 
-            },
+            { url: 'https://www.gldaily.com/', pv: 4714, tag: 'トップページ' },
+            { url: 'https://www.gldaily.com/contact/', pv: 605, tag: 'お問い合わせ' },
+            { url: 'https://www.gldaily.com/news/columns/columns41072/', pv: 412, tag: 'コラム記事' },
+            { url: 'https://www.gldaily.com/services/japankuru/', pv: 410, tag: 'サービス紹介' },
+            { url: 'https://www.gldaily.com/news/columns/columns44130/', pv: 392, tag: 'コラム記事' }
         ];
 
-        async function fetchMetadata(url) {
-            const proxy = 'https://api.allorigins.win/raw?url=';
-            const res   = await fetch(proxy + encodeURIComponent(url));
-            if (!res.ok) throw new Error('メタデータ불러오기 실패');
-            
-            const html = await res.text();
-            const doc  = new DOMParser().parseFromString(html, 'text/html');
-
-            const og = sel => doc.querySelector(sel)?.content || '';
-            return {
-                title:       og('meta[property="og:title"]')       || doc.title,
-                description: og('meta[name="description"]')        || '',
-                image:       og('meta[property="og:image"]')       || ''
-            };
-        }
-
-        async function renderPreviews() {
-            const container = document.getElementById('previews');
-            for (let item of articles) {
-                const { title, description, image } = await fetchMetadata(item.url);
-                const card = document.createElement('div');
-                card.className = 'preview-card';
-                card.innerHTML = `
-                    ${ image
-                        ? `<img src="${image}" alt="thumbnail">`
-                        : `<div style="width:120px;height:80px;background:#eee;border-radius:4px;"></div>`
-                    }
-                    <div class="preview-info">
-                        <h4><a href="${item.url}" target="_blank" rel="noopener">${title}</a></h4>
-                        <p>${description}</p>
-                        <div class="preview-meta">
-                            <span class="pv-badge">${item.pv.toLocaleString()} PV</span>
-                            <span class="tag-badge">${item.tag}</span>
-                        </div>
+        const container = document.getElementById('previews');
+        if (!container) return;
+        
+        container.innerHTML = '';
+        for (let item of articles) {
+            const card = document.createElement('div');
+            card.className = 'preview-card';
+            card.innerHTML = `
+                <div style="width:120px;height:80px;background:#eee;border-radius:4px;"></div>
+                <div class="preview-info">
+                    <h4><a href="${item.url}" target="_blank">${item.url.split('/').filter(x=>x).pop() || 'Home'}</a></h4>
+                    <div class="preview-meta">
+                        <span class="pv-badge">${item.pv.toLocaleString()} PV</span>
+                        <span class="tag-badge">${item.tag}</span>
                     </div>
-                `;
-                container.appendChild(card);
-            }
+                </div>`;
+            container.appendChild(card);
         }
+    }
 
-        document.addEventListener('DOMContentLoaded', renderPreviews);
+    // Demo functions
+    window.showDemo = function(demoType) {
+        const viewer = document.getElementById('demo-viewer');
+        const iframe = document.getElementById('demo-iframe');
+        const title = document.getElementById('demo-title');
+        
+        const demoUrls = {
+            'demoA': 'https://yourjuli76.github.io/LP/marunouchi.index.html',
+            'demoB': 'https://yourjuli76.github.io/LP/aichi_B_2.html', 
+            'demoC': 'https://yourjuli76.github.io/LP/lawer_briefing_index.html#sec1'
+        };
+        
+        const demoTitles = {
+            'demoA': 'デモサイト A - AREA特化LP',
+            'demoB': 'デモサイト B - 弁護士事務所特化LP',
+            'demoC': '標準提案書 - LP制作・PRパッケージ企画サマリ'
+        };
+
+        document.querySelectorAll('.demo-controls .btn').forEach(btn => {
+            btn.className = 'btn btn-secondary';
+        });
+        document.getElementById(`btn-${demoType}`).className = 'btn btn-primary';
+        
+        title.textContent = demoTitles[demoType];
+        iframe.src = demoUrls[demoType];
+        viewer.style.display = 'block';
+        setTimeout(() => viewer.classList.add('show'), 10);
+    };
+
+    window.closeDemo = function() {
+        const viewer = document.getElementById('demo-viewer');
+        viewer.classList.remove('show');
+        setTimeout(() => {
+            viewer.style.display = 'none';
+            document.getElementById('demo-iframe').src = '';
+        }, 400);
+    };
+
+    // Project Preview
+    window.showProjectPreview = function(projectType) {
+        const modal = document.getElementById('project-preview-modal');
+        const iframe = document.getElementById('project-preview-iframe');
+        const title = document.getElementById('preview-modal-title');
+        const infoPanel = document.getElementById('preview-project-info');
+        
+        const projectData = {
+            'indonesia': {
+                title: 'JAPANKURU Indonesia LP',
+                url: 'https://globaldaily.github.io/2025_JK/indonesia.html'
+            },
+            'coupon': {
+                title: 'JAPANKURU クーポンページ',
+                url: 'https://globaldaily.github.io/2025_JK/coupon.html'
+            },
+            'taiwan': {
+                title: 'テイ先生コラボレーション特設ページ',
+                url: 'https://globaldaily.github.io/LP/teisensei.index.html'
+            }
+        };
+        
+        const project = projectData[projectType];
+        if (!project) return;
+        
+        title.textContent = project.title;
+        iframe.src = project.url;
+        modal.style.display = 'block';
+        setTimeout(() => modal.classList.add('show'), 10);
+    };
+
+    window.closeProjectPreview = function() {
+        const modal = document.getElementById('project-preview-modal');
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            document.getElementById('project-preview-iframe').src = '';
+        }, 300);
+    };
+
+    window.toggleEvent = function(eventId) {
+        const eventCard = document.getElementById(eventId);
+        if (eventCard) {
+            eventCard.classList.toggle('expanded');
+        }
+    };
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', initializeApp);
+</script>
    
-        // Project Preview Functions
-        window.showProjectPreview = function(projectType) {
-            const modal = document.getElementById('project-preview-modal');
-            const iframe = document.getElementById('project-preview-iframe');
-            const title = document.getElementById('preview-modal-title');
-            const infoPanel = document.getElementById('preview-project-info');
-            
-            const projectData = {
-            'Indonesia': {
-            title: 'JAPANKURU Indonesia LP',
-            url: 'https://globaldaily.github.io/2025_JK/indonesia.html,
-            info: `<div class="preview-project-details">
-                <h4>プロジェクト概要</h4>
-                <p>インドネシア市場向け特設ランディングページです。</p>
-                
-                <h4>主要機能</h4>
-                <ul>
-                    <li>インドネシア語対応</li>
-                    <li>現地向けコンテンツ最適化</li>
-                    <li>ジャカルタ旅行博連携</li>
-                    <li>モバイルファースト設計</li>
-                </ul>
-                
-                <h4>期待効果</h4>
-                <div class="effect-metrics">
-                    <div class="effect-item">
-                        <span class="effect-value">+200%</span>
-                        <span class="effect-label">インドネシア市場リーチ</span>
-                    </div>
-                    <div class="effect-item">
-                        <span class="effect-value">9/24</span>
-                        <span class="effect-label">JKT博覧会連携</span>
-                    </div>
-                </div>
-                
-                <h4>技術スタック</h4>
-                <div class="tech-stack">
-                    <span class="tech-item">Bahasa Indonesia</span>
-                    <span class="tech-item">Responsive Design</span>
-                    <span class="tech-item">SEO最適化</span>
-                </div>
-            </div>
-        `
-    },
-                'coupon': {
-                    title: 'JAPANKURU クーポンページ',
-                    url: 'https://globaldaily.github.io/2025_JK/coupon.html',
-                    info: `
-                        <div class="preview-project-details">
-                            <h4>プロジェクト概要</h4>
-                            <p>訪日韓国人をターゲットにしたクーポン配布・利用促進に特化したランディングページです。</p>
-                            
-                            <h4>主要機能</h4>
-                            <ul>
-                                <li>多様なクーポン表示システム</li>
-                                <li>モバイル最適化デザイン</li>
-                                <li>SNSシェア機能</li>
-                                <li>利用統計ダッシュボード</li>
-                            </ul>
-                            
-                            <h4>期待効果</h4>
-                            <div class="effect-metrics">
-                                <div class="effect-item">
-                                    <span class="effect-value">+40%</span>
-                                    <span class="effect-label">クーポン利用率向上</span>
-                                </div>
-                                <div class="effect-item">
-                                    <span class="effect-value">+25%</span>
-                                    <span class="effect-label">新規ユーザー獲得</span>
-                                </div>
-                            </div>
-                            
-                            <h4>技術スタック</h4>
-                            <div class="tech-stack">
-                                <span class="tech-item">React</span>
-                                <span class="tech-item">TypeScript</span>
-                                <span class="tech-item">Tailwind CSS</span>
-                                <span class="tech-item">Firebase</span>
-                            </div>
-                        </div>
-                    `
-                },
-                'taiwan': {
-                    title: 'テイ先生コラボレーション特設ページ',
-                    url: 'https://globaldaily.github.io/LP/teisensei.index.html',
-                    info: `
-                        <div class="preview-project-details">
-                            <h4>プロジェクト概要</h4>
-                            <p>台湾の人気インフルエンサー「テイ先生」とのコラボレーション企画専用ランディングページです。</p>
-                            
-                            <h4>コンテンツ内容</h4>
-                            <ul>
-                                <li>テイ先生おすすめスポット紹介</li>
-                                <li>限定クーポン・特典配布</li>
-                                <li>ファン向け特別企画</li>
-                                <li>コラボ動画・写真ギャラリー</li>
-                            </ul>
-                            
-                            <h4>マーケティング効果</h4>
-                            <div class="effect-metrics">
-                                <div class="effect-item">
-                                    <span class="effect-value">50万</span>
-                                    <span class="effect-label">推定リーチ数</span>
-                                </div>
-                                <div class="effect-item">
-                                    <span class="effect-value">+60%</span>
-                                    <span class="effect-label">台湾市場認知度向上</span>
-                                </div>
-                            </div>
-                            
-                            <h4>多言語対応</h4>
-                            <div class="tech-stack">
-                                <span class="tech-item">繁體中文</span>
-                                <span class="tech-item">日本語</span>
-                                <span class="tech-item">English</span>
-                            </div>
-                        </div>
-                    `
-                },
-                'media': {
-                    title: 'メディア向けダウンロードページ',
-                    url: 'https://yourjuli76.github.io/GLDHP/media.index.html',
-                    info: `
-                        <div class="preview-project-details">
-                            <h4>プロジェクト概要</h4>
-                            <p>報道関係者が自由にデータや画像をダウンロード・引用できる専用ページです。</p>
-                            
-                            <h4>提供コンテンツ</h4>
-                            <ul>
-                                <li>会社概要・ロゴデータ</li>
-                                <li>市場調査レポート（PDF）</li>
-                                <li>統計データ（Excel・CSV）</li>
-                                <li>プレスリリース履歴</li>
-                                <li>代表者プロフィール・写真</li>
-                            </ul>
-                            
-                            <h4>期待効果</h4>
-                            <div class="effect-metrics">
-                                <div class="effect-item">
-                                    <span class="effect-value">+150%</span>
-                                    <span class="effect-label">メディア掲載数向上</span>
-                                </div>
-                                <div class="effect-item">
-                                    <span class="effect-value">24時間</span>
-                                    <span class="effect-label">資料提供時間短縮</span>
-                                </div>
-                            </div>
-                            
-                            <h4>機能</h4>
-                            <div class="tech-stack">
-                                <span class="tech-item">ワンクリックDL</span>
-                                <span class="tech-item">利用統計</span>
-                                <span class="tech-item">自動更新</span>
-                            </div>
-                        </div>
-                    `
-                },
-                'seminar': {
-                    title: '訪日韓国人市場向けセミナーページ',
-                    url: 'https://yourjuli76.github.io/seminar/ko.index.html',
-                    info: `
-                        <div class="preview-project-details">
-                            <h4>プロジェクト概要</h4>
-                            <p>訪日韓国人市場の最新トレンドと効果的なアプローチ方法を解説するオンラインセミナー専用ページです。</p>
-                            
-                            <h4>セミナー内容</h4>
-                            <ul>
-                                <li>2025年韓国人旅行トレンド分析</li>
-                                <li>効果的なマーケティング手法</li>
-                                <li>成功事例とケーススタディ</li>
-                                <li>質疑応答・個別相談</li>
-                            </ul>
-                            
-                            <h4>想定参加者</h4>
-                            <div class="effect-metrics">
-                                <div class="effect-item">
-                                    <span class="effect-value">100名</span>
-                                    <span class="effect-label">目標参加者数</span>
-                                </div>
-                                <div class="effect-item">
-                                    <span class="effect-value">30社</span>
-                                    <span class="effect-label">企業参加予定</span>
-                                </div>
-                            </div>
-                            
-                            <h4>機能</h4>
-                            <div class="tech-stack">
-                                <span class="tech-item">事前申込</span>
-                                <span class="tech-item">Zoom連携</span>
-                                <span class="tech-item">資料DL</span>
-                                <span class="tech-item">アンケート</span>
-                            </div>
-                        </div>
-                    `
-                }
-            };
-            
-            const project = projectData[projectType];
-            if (!project) return;
-            
-            // Update modal content
-            title.textContent = project.title;
-            iframe.src = project.url;
-            infoPanel.innerHTML = project.info;
-            
-            // Show modal
-            modal.style.display = 'block';
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 10);
-        };
-
-        window.closeProjectPreview = function() {
-            const modal = document.getElementById('project-preview-modal');
-            const iframe = document.getElementById('project-preview-iframe');
-            
-            modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = 'none';
-                iframe.src = '';
-            }, 300);
-        };  
-
-        // 여기에 추가
-        window.toggleEvent = function(eventId) {
-            const eventCard = document.getElementById(eventId);
-            if (eventCard) {
-                eventCard.classList.toggle('expanded');
-            }
-        };
-    </script>
 </body>
 </html>
