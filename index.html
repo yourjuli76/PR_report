@@ -2402,7 +2402,7 @@
         <div id="summary" class="tab-pane active">
             <div class="section-header">
                 <h2 class="section-title">Executive Summary</h2>
-                <p class="section-description">2025.7.26～8.24 活動サマリ</p>
+                <p class="section-description">2025.7.26～8.31 活動サマリ</p>
             </div>
             
             <!-- 成果指標 (Outcomes) -->
@@ -2414,7 +2414,7 @@
                 </div>
                 <div class="summary-card outcome-card" style="background: var(--bg-grouped-secondary); border-radius: 20px; padding: 3rem 2rem; text-align: center; box-shadow: var(--shadow-2); border: 0.5px solid var(--system-gray6); transition: all 0.3s var(--spring-1);">
                     <h4 style="font-size: 1.125rem; font-weight: 600; color: var(--label-secondary); margin-bottom: 1rem;">有効お問い合わせ</h4>
-                    <p style="font-size: 3rem; font-weight: 800; color: var(--system-green); margin: 0; line-height: 1;">1件</p>
+                    <p style="font-size: 3rem; font-weight: 800; color: var(--system-green); margin: 0; line-height: 1;">2件</p>
                 </div>
             </div>
             
@@ -2569,158 +2569,207 @@
         <div class="glass-card">
             <h3 style="margin-bottom: 2rem; font-weight: 700; text-align: center;">開催予定イベント</h3>
             
-            <!-- ISI日本語学校 企業見学 -->
-            <div class="event-card" id="isi-event">
-                <div class="event-header" onclick="toggleEvent('isi-event')">
-                    <div>
-                        <span class="event-badge badge-event">EVENT</span>
-                        <span class="event-title">ISI日本語学校 企業見学・研修</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <span class="event-date">2025年8月28日（木）</span>
-                        <span class="expand-icon">▼</span>
+            <!-- ISI日本語学校 企業見学 - 완료 상태로 변경 -->
+<div class="event-card completed" id="isi-event">
+    <div class="event-header" onclick="toggleEvent('isi-event')">
+        <div>
+            <span class="event-badge" style="background: linear-gradient(135deg, var(--system-green), #30D158); color: white; font-size: 0.9rem; padding: 0.5rem 1rem;">✓ 開催完了</span>
+            <span class="event-title">ISI日本語学校 企業見学・研修</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <span class="event-date" style="color: var(--system-green); font-weight: 600;">2025年8月28日（木）実施済み</span>
+            <span class="expand-icon">▼</span>
+        </div>
+    </div>
+    
+    <div class="event-body">
+        <!-- 완료 요약 섹션 -->
+        <div style="background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(52, 199, 89, 0.05)); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--system-green);">
+            <h4 style="color: var(--system-green); font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">🎉 イベント開催完了</h4>
+            <p style="font-size: 1.1rem; color: var(--label-primary); margin-bottom: 0.5rem;">
+                <strong>参加者23名</strong>が来社し、グローバル人材育成プログラムを実施いたしました。
+            </p>
+            <p style="font-size: 0.95rem; color: var(--label-secondary);">
+                多国籍学生との交流を通じて、当社のインバウンド事業への理解促進と将来の人材確保に向けた関係構築を行いました。
+            </p>
+        </div>
+
+       <!-- 이벤트 사진 -->
+<div style="margin: 2rem 0;">
+    <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--label-primary);">📸 イベント写真</h4>
+    <div style="border-radius: 16px; height: 200px; overflow: hidden; position: relative; box-shadow: var(--shadow-2);">
+        <img src="https://www.gldaily.com/gld-kanri/wp-content/uploads/2025/09/ISI_CC08-scaled.jpg" alt="ISI学生23名との集合写真" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 이미지 오버레이 캡션 -->
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white; padding: 1rem; text-align: center;">
+            
+            <div style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.9;">2025.8.28 @グローバルデイリー本社</div>
+        </div>
+    </div>
+</div>
+
+        <!-- 관련 기사 프리뷰 -->
+        <!-- 관련 기사 프리뷰 -->
+<div style="margin: 2rem 0;">
+    <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: var(--label-primary);">📰 関連記事</h4>
+    <div style="background: white; border: 1px solid var(--system-gray5); border-radius: 12px; padding: 1.5rem; box-shadow: var(--shadow-1);">
+        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+            <div style="background: var(--system-blue); color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600;">渋谷新聞</div>
+            <span style="font-size: 0.85rem; color: var(--label-tertiary);">2025年8月29日掲載</span>
+        </div>
+        <h5 style="font-size: 1.1rem; font-weight: 700; color: var(--label-primary); margin-bottom: 0.75rem; line-height: 1.4;">
+            <a href="https://www.dac-group.co.jp/news/3225/" target="_blank" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--system-blue)'" onmouseout="this.style.color='inherit'">
+                「多様性を活かすインバウンド企業」<br>ISI日本語学校生がグローバルデイリーを見学
+            </a>
+        </h5>
+        <p style="font-size: 0.9rem; color: var(--label-secondary); line-height: 1.5; margin-bottom: 1rem;">
+            グローバルデイリー株式会社は28日、ISI日本語学校の学生15名を招いた企業見学研修を実施した。ロシア、中国、スペイン、アメリカなど多国籍の学生が参加し、同社のインバウンド事業について学んだ...
+        </p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.8rem; color: var(--label-tertiary);">DAC HDS 佐伯</span>
+            <a href="https://www.dac-group.co.jp/news/3225/" target="_blank" style="background: var(--system-blue); color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.8rem; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s ease;" onmouseover="this.style.background='var(--system-blue-dark)'" onmouseout="this.style.background='var(--system-blue)'">記事を読む →</a>
+        </div>
+    </div>
+</div>
+        <!-- 기존 기본 설명 -->
+        <p class="event-description">
+            未来のグローバル人材との関係構築を目的とした企業訪問イベントです。
+        </p>
+        
+        <!-- 기존 참가자 정보 -->
+        <div class="info-section">
+            <h4>参加者構成（計23名）</h4>
+            <div class="participant-stats">
+                <div class="stat-box">
+                    <h5>参加者内訳</h5>
+                    <div class="stat-list">
+                        <div class="stat-row">
+                            <span>ISI日本語学校 学生</span>
+                            <strong>20名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>引率教員</span>
+                            <strong>1名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>引率大学生</span>
+                            <strong>1名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>渋谷新聞 記者</span>
+                            <strong>1名</strong>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="event-body">
-                    <p class="event-description">
-                        未来のグローバル人材との関係構築を目的とした企業訪問イベントです。
-                    </p>
-                    
-                    <!-- 参加者情報 -->
-                    <div class="info-section">
-                        <h4>参加者構成（計23名）</h4>
-                        <div class="participant-stats">
-                            <div class="stat-box">
-                                <h5>参加者内訳</h5>
-                                <div class="stat-list">
-                                    <div class="stat-row">
-                                        <span>ISI日本語学校 学生</span>
-                                        <strong>20名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>引率教員</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>引率大学生</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>渋谷新聞 記者</span>
-                                        <strong>1名</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="stat-box">
-                                <h5>学生国籍構成</h5>
-                                <div class="stat-list">
-                                    <div class="stat-row">
-                                        <span>🇷🇺 ロシア・東欧系</span>
-                                        <strong>5名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇨🇳 中国系</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇪🇸 スペイン・中南米系</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🇰🇷 韓国系</span>
-                                        <strong>3名</strong>
-                                    </div>
-                                    <div class="stat-row">
-                                        <span>🌏 その他</span>
-                                        <strong>4名</strong>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="stat-box">
+                    <h5>学生国籍構成</h5>
+                    <div class="stat-list">
+                        <div class="stat-row">
+                            <span>🇷🇺 ロシア・東欧系</span>
+                            <strong>5名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>🇨🇳 中国系</span>
+                            <strong>4名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>🇪🇸 スペイン・中南米系</span>
+                            <strong>4名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>🇰🇷 韓国系</span>
+                            <strong>3名</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>🌏 その他</span>
+                            <strong>4名</strong>
                         </div>
                     </div>
-                    
-                    <!-- プログラムスケジュール -->
-                    <h4 style="font-size: 1rem; font-weight: 700; margin: 1.5rem 0 1rem;">プログラムスケジュール</h4>
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 110px;">時間</th>
-                                <th style="width: 60px; text-align: center;">所要</th>
-                                <th>内容</th>
-                                <th style="width: 80px; text-align: center;">担当</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>13:00-13:05</td>
-                                <td style="text-align: center; color: var(--system-gray);">5分</td>
-                                <td>上野本社 13階 受付集合・ご案内</td>
-                                <td style="text-align: center;">藤田・金</td>
-                            </tr>
-                            <tr>
-                                <td>13:05-13:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">20分</td>
-                                <td><strong>ビジネスイントロダクション</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">会社概要・インバウンド市場の現状</span>
-                                </td>
-                                <td style="text-align: center;">金</td>
-                            </tr>
-                            <tr>
-                                <td>13:25-13:55</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>JAPANKURU紹介</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">多言語情報発信の仕組み（やさしい日本語対応）</span>
-                                </td>
-                                <td style="text-align: center;">チェ</td>
-                            </tr>
-                            <tr>
-                                <td>13:55-14:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>korekoko紹介</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">在留外国人向けイベントプラットフォーム</span>
-                                </td>
-                                <td style="text-align: center;">ウィルケン</td>
-                            </tr>
-                            <tr style="background: #fafafa;">
-                                <td>14:25-14:35</td>
-                                <td style="text-align: center; color: var(--system-gray);">10分</td>
-                                <td>休憩</td>
-                                <td style="text-align: center;">-</td>
-                            </tr>
-                            <tr>
-                                <td>14:35-15:25</td>
-                                <td style="text-align: center; color: var(--system-gray);">50分</td>
-                                <td><strong>ワークショップ</strong><br>
-                                    <span style="color: #616161; font-size: 0.9rem;">訪日外国人集客企画案をグループで立案</span>
-                                </td>
-                                <td style="text-align: center;">全員</td>
-                            </tr>
-                            <tr>
-                                <td>15:25-15:55</td>
-                                <td style="text-align: center; color: var(--system-gray);">30分</td>
-                                <td><strong>発表 & フィードバック</strong></td>
-                                <td style="text-align: center;">全員</td>
-                            </tr>
-                            <tr>
-                                <td>15:55-16:00</td>
-                                <td style="text-align: center; color: var(--system-gray);">5分</td>
-                                <td><strong>Q&A・クロージング</strong></td>
-                                <td style="text-align: center;">金</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
+        </div>
+        
+        <!-- 기존 프로그램 스케줄 -->
+        <h4 style="font-size: 1rem; font-weight: 700; margin: 1.5rem 0 1rem;">プログラムスケジュール</h4>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th style="width: 110px;">時間</th>
+                    <th style="width: 60px; text-align: center;">所要</th>
+                    <th>内容</th>
+                    <th style="width: 80px; text-align: center;">担当</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>13:00-13:05</td>
+                    <td style="text-align: center; color: var(--system-gray);">5分</td>
+                    <td>上野本社 13階 受付集合・ご案内</td>
+                    <td style="text-align: center;">藤田・金</td>
+                </tr>
+                <tr>
+                    <td>13:05-13:25</td>
+                    <td style="text-align: center; color: var(--system-gray);">20分</td>
+                    <td><strong>ビジネスイントロダクション</strong><br>
+                        <span style="color: #616161; font-size: 0.9rem;">会社概要・インバウンド市場の現状</span>
+                    </td>
+                    <td style="text-align: center;">金</td>
+                </tr>
+                <tr>
+                    <td>13:25-13:55</td>
+                    <td style="text-align: center; color: var(--system-gray);">30分</td>
+                    <td><strong>JAPANKURU紹介</strong><br>
+                        <span style="color: #616161; font-size: 0.9rem;">多言語情報発信の仕組み（やさしい日本語対応）</span>
+                    </td>
+                    <td style="text-align: center;">チェ</td>
+                </tr>
+                <tr>
+                    <td>13:55-14:25</td>
+                    <td style="text-align: center; color: var(--system-gray);">30분</td>
+                    <td><strong>korekoko紹介</strong><br>
+                        <span style="color: #616161; font-size: 0.9rem;">在留外国人向けイベントプラットフォーム</span>
+                    </td>
+                    <td style="text-align: center;">ウィルケン</td>
+                </tr>
+                <tr style="background: #fafafa;">
+                    <td>14:25-14:35</td>
+                    <td style="text-align: center; color: var(--system-gray);">10分</td>
+                    <td>休憩</td>
+                    <td style="text-align: center;">-</td>
+                </tr>
+                <tr>
+                    <td>14:35-15:25</td>
+                    <td style="text-align: center; color: var(--system-gray);">50分</td>
+                    <td><strong>ワークショップ</strong><br>
+                        <span style="color: #616161; font-size: 0.9rem;">訪日外国人集客企画案をグループで立案</span>
+                    </td>
+                    <td style="text-align: center;">全員</td>
+                </tr>
+                <tr>
+                    <td>15:25-15:55</td>
+                    <td style="text-align: center; color: var(--system-gray);">30분</td>
+                    <td><strong>発表 & フィードバック</strong></td>
+                    <td style="text-align: center;">全員</td>
+                </tr>
+                <tr>
+                    <td>15:55-16:00</td>
+                    <td style="text-align: center; color: var(--system-gray);">5분</td>
+                    <td><strong>Q&A・クロージング</strong></td>
+                    <td style="text-align: center;">金</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
           <!-- 訪日韓国人市場セミナー -->
+<!-- 訪日韓国人市場セミナー -->
 <div class="event-card" id="seminar-event">
     <div class="event-header" onclick="toggleEvent('seminar-event')">
         <div>
             <span class="event-badge badge-seminar">SEMINAR</span>
             <span class="event-title">訪日韓国人市場セミナー</span>
-            <span style="background: var(--system-blue); color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; margin-left: 1rem;">14社 17名参加</span>
+            <span style="background: var(--system-blue); color: white; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; margin-left: 1rem;">19社 22名申込</span>
         </div>
         <div style="display: flex; align-items: center; gap: 1rem;">
             <span class="event-date">2025年9月26日（金）</span>
@@ -2767,7 +2816,7 @@
                     </div>
                     <div class="stat-row">
                         <span>製造業</span>
-                        <strong>3名</strong>
+                        <strong>4名</strong>
                     </div>
                     <div class="stat-row">
                         <span>広告・マーケティング</span>
@@ -2775,7 +2824,7 @@
                     </div>
                     <div class="stat-row">
                         <span>その他</span>
-                        <strong>4名</strong>
+                        <strong>6名</strong>
                     </div>
                 </div>
             </div>
@@ -2783,12 +2832,10 @@
             <div class="stat-box">
                 <h5>主要参加企業</h5>
                 <div style="font-size: 0.9rem; line-height: 1.8;">
-                    • オリエンタルランド<br>
-                    • 阪急阪神百貨店（2名）<br>
-                    • 亀田製菓（2名）<br>
-                    • イトーヨーカ堂<br>
-                    • パルコ<br>
-                    • エイベックス
+                    • 株式会社そごう・西武<br>
+                    • エイベックス・アライアンス<br>
+                    • 株式会社ヨックモック<br>
+                    • 北海道コンフェクト<br>
                 </div>
             </div>
         </div>
@@ -2796,7 +2843,7 @@
         <!-- 参加者詳細リスト -->
         <details style="background: #F9F9F9; border-radius: 12px; padding: 1rem; margin-top: 1.5rem;">
             <summary style="cursor: pointer; font-weight: 600; color: var(--system-blue); padding: 0.5rem;">
-                参加者詳細リストを表示 →
+                参加者詳細リスト（19社20名）を表示 →
             </summary>
             
             <div style="overflow-x: auto; margin-top: 1rem;">
@@ -2804,33 +2851,37 @@
                     <thead>
                         <tr>
                             <th>企業名</th>
-                            <th>担当者</th>
-                            <th>部署</th>
+                            <th>氏名</th>
+                            <th>部署・役職</th>
+                            <th>業種</th>
                             <th style="text-align: center;">申込日</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>オリエンタルランド</td><td>張 蕙宇</td><td>マーケットディベロップメント部</td><td style="text-align: center;">7/31</td></tr>
-                        <tr><td>イトーヨーカ堂</td><td>伊藤 寿代</td><td>営業企画室</td><td style="text-align: center;">8/5</td></tr>
-                        <tr><td>パルコ</td><td>田中 堅</td><td>渋谷パルコ</td><td style="text-align: center;">8/5</td></tr>
-                        <tr style="background: #FAFAFA;"><td>阪急阪神百貨店</td><td>杉崎 ふさ</td><td>海外顧客マーケティング</td><td style="text-align: center;">8/6</td></tr>
-                        <tr style="background: #FAFAFA;"><td>阪急阪神百貨店</td><td>富田 桃子</td><td>海外顧客マーケティング部</td><td style="text-align: center;">8/11</td></tr>
-                        <tr><td>ヨックモック</td><td>飯塚 裕子</td><td>事業開発部</td><td style="text-align: center;">8/6</td></tr>
-                        <tr><td>亀田製菓</td><td>下江 勲</td><td>-</td><td style="text-align: center;">8/8</td></tr>
-                        <tr><td>亀田製菓</td><td>フロロワ アナスターシア</td><td>海外事業部</td><td style="text-align: center;">8/8</td></tr>
-                        <tr><td>富士フイルムヘルスケアラボラトリー</td><td>熊澤 俊吾</td><td>海外インバウンドG</td><td style="text-align: center;">8/12</td></tr>
-                        <tr><td>マッシュスタイルラボ</td><td>中澤 主税</td><td>営業本部</td><td style="text-align: center;">8/19</td></tr>
-                        <tr><td>北海道コンフェクト</td><td>井上 泰一</td><td>-</td><td style="text-align: center;">8/19</td></tr>
-                        <tr><td>ガーデンテラスホテルズ</td><td>杉本 慶</td><td>-</td><td style="text-align: center;">8/19</td></tr>
-                        <tr><td>ジャンボツアーズ</td><td>李 明勳</td><td>インバウンド営業部</td><td style="text-align: center;">8/20</td></tr>
-                        <tr><td>二木ゴルフ</td><td>松本 賢</td><td>経営企画室</td><td style="text-align: center;">8/20</td></tr>
-                        <tr><td>エイベックス・アライアンス＆パートナーズ</td><td>中山 勝代</td><td>レーベル営業グループ</td><td style="text-align: center;">8/22</td></tr>
-                        <tr><td>合同会社ジョイメイク</td><td>中谷 忠之</td><td>-</td><td style="text-align: center;">8/23</td></tr>
-                        <tr><td>日本通運株式会社</td><td>松本 光平</td><td>営業部</td><td style="text-align: center;">8/23</td></tr>
+                        <tr><td>大和ハウスリアルティマネジメント㈱</td><td>清水 礼</td><td>-</td><td>その他</td><td style="text-align: center;">8/26</td></tr>
+                        <tr><td>横浜高速鉄道株式会社</td><td>一重 治</td><td>経営管理部 インバウンド担当</td><td>その他</td><td style="text-align: center;">8/26</td></tr>
+                        <tr><td>株式会社そごう・西武</td><td>山口 侑真</td><td>メディアプロモーション部インバウンド担当 スタッフ</td><td>小売・流通</td><td style="text-align: center;">8/26</td></tr>
+                        <tr><td>カイゲンファーマ株式会社</td><td>武部 直人</td><td>営業企画部</td><td>製造業</td><td style="text-align: center;">8/22</td></tr>
+                        <tr><td>エイベックス・アライアンス＆パートナーズ株式会社</td><td>中山 勝代</td><td>レーベル営業グループ</td><td>広告・マーケティング</td><td style="text-align: center;">8/22</td></tr>
+                        <tr><td>株式会社二木ゴルフ</td><td>松本 賢</td><td>経営企画室 取締役　室長</td><td>その他</td><td style="text-align: center;">8/20</td></tr>
+                        <tr><td>株式会社ジャンボツアーズ</td><td>李 明勳</td><td>インバウンド営業部 韓国担当</td><td>旅行・観光</td><td style="text-align: center;">8/20</td></tr>
+                        <tr><td>株式会社ガーデンテラスホテルズ</td><td>杉本 慶</td><td>-</td><td>宿泊</td><td style="text-align: center;">8/19</td></tr>
+                        <tr><td>北海道コンフェクト株式会社</td><td>井上 泰一</td><td>専務取締役</td><td>小売・流通</td><td style="text-align: center;">8/19</td></tr>
+                        <tr><td>株式会社ヨックモック</td><td>飯塚 裕子</td><td>事業開発部 リーダー</td><td>製造業</td><td style="text-align: center;">8/19</td></tr>
+                        <tr><td>株式会社　マッシュスタイルラボ</td><td>中澤 主税</td><td>営業本部　営業推進部 課長</td><td>小売・流通</td><td style="text-align: center;">8/19</td></tr>
+                        <tr><td>株式会社富士フイルムヘルスケアラボラトリー</td><td>熊澤 俊吾</td><td>海外インバウンドG マネージャー</td><td>製造業</td><td style="text-align: center;">8/12</td></tr>
+                        <tr><td>株式会社阪急阪神百貨店</td><td>富田 桃子</td><td>海外顧客マーケティング部 アシスタントマネージャー</td><td>小売・流通</td><td style="text-align: center;">8/11</td></tr>
+                        <tr><td>亀田製菓株式会社</td><td>フロロワ アナスターシア</td><td>海外事業部 輸出入担当</td><td>製造業</td><td style="text-align: center;">8/8</td></tr>
+                        <tr><td>亀田製菓株式会社</td><td>下江 勲</td><td>-</td><td>広告・マーケティング</td><td style="text-align: center;">8/8</td></tr>
+                        <tr><td>株式会社 阪急阪神百貨店</td><td>杉崎 ふさ</td><td>海外顧客マーケティング ディビジョンマネージャー</td><td>小売・流通</td><td style="text-align: center;">8/6</td></tr>
+                        <tr><td>株式会社　阪急阪神百貨店</td><td>太田 祐梨奈</td><td>海外顧客マーケティング部 マネージャー</td><td>小売・流通</td><td style="text-align: center;">8/6</td></tr>
+                        <tr><td>株式会社イトーヨーカ堂</td><td>伊藤 寿代</td><td>営業企画室 マネジャー</td><td>小売・流通</td><td style="text-align: center;">8/5</td></tr>
+                        <tr><td>株式会社パルコ</td><td>田中 堅</td><td>渋谷パルコ</td><td>小売・流通</td><td style="text-align: center;">8/5</td></tr>
+                        <tr><td>株式会社オリエンタルランド</td><td>張 蕙宇</td><td>マーケットディベロップメント部海外マーケットグループ シニアリーディングスタッフ</td><td>エンターテイメント</td><td style="text-align: center;">7/31</td></tr>
                     </tbody>
                 </table>
                 <p style="font-size: 0.8rem; color: var(--system-gray); text-align: center; margin-top: 0.75rem; font-style: italic;">
-                    ※ 実参加者は17名（太田祐梨奈様重複除く、カイゲンファーマ様キャンセル）
+                    ※ 申込者数：20名（19社） | データ更新日：2025年9月2日
                 </p>
             </div>
         </details>
@@ -2966,17 +3017,17 @@
             <!-- JAPANKURU Indonesia LP -->
             <div class="project-card featured">
                 <div class="project-header">
-                    <div class="project-status-badge live">最終段階</div>
-                    <div class="project-progress-ring">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-blue)" stroke-width="4" 
-                                    stroke-dasharray="157" stroke-dashoffset="8" stroke-linecap="round" 
-                                    transform="rotate(-90 30 30)" class="progress-circle"/>
-                        </svg>
-                        <div class="progress-text">95%</div>
-                    </div>
-                </div>
+                    <div class="project-status-badge" style="background: linear-gradient(135deg, var(--system-green), #30D158); color: white;">完了</div>
+<div class="project-progress-ring">
+    <svg width="60" height="60" viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4" 
+                stroke-dasharray="157" stroke-dashoffset="0" stroke-linecap="round" 
+                transform="rotate(-90 30 30)" class="progress-circle"/>
+    </svg>
+    <div class="progress-text" style="color: var(--system-green);">✓</div>
+</div>
+</div>
                 
                 <div class="project-content">
                     <div class="project-meta">
@@ -3058,17 +3109,17 @@
             <!-- JAPANKURU クーポンページ -->
             <div class="project-card featured">
                 <div class="project-header">
-                    <div class="project-status-badge live">仕上げ段階</div>
-                    <div class="project-progress-ring">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4" 
-                                    stroke-dasharray="157" stroke-dashoffset="16" stroke-linecap="round" 
-                                    transform="rotate(-90 30 30)" class="progress-circle"/>
-                        </svg>
-                        <div class="progress-text">90%</div>
-                    </div>
-                </div>
+                    <div class="project-status-badge" style="background: linear-gradient(135deg, var(--system-green), #30D158); color: white;">完了</div>
+<div class="project-progress-ring">
+    <svg width="60" height="60" viewBox="0 0 60 60">
+        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-gray5)" stroke-width="4"/>
+        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--system-green)" stroke-width="4" 
+                stroke-dasharray="157" stroke-dashoffset="0" stroke-linecap="round" 
+                transform="rotate(-90 30 30)" class="progress-circle"/>
+    </svg>
+    <div class="progress-text" style="color: var(--system-green);">✓</div>
+</div>
+</div>
                 
                 <div class="project-content">
                     <div class="project-meta">
@@ -3454,7 +3505,7 @@
             },
             'coupon': {
                 title: 'JAPANKURU クーポンページ',
-                url: 'https://globaldaily.github.io/2025_JK/coupon.html'
+                url: 'https://globaldaily.github.io/2025_JK/coupon_0827.html'
             },
             'taiwan': {
                 title: 'テイ先生コラボレーション特設ページ',
